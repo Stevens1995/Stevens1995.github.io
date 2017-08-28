@@ -4,12 +4,12 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://stevens1995.github.io/"/>
   <updated>2017-08-28T14:16:26.989Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://stevens1995.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Stevens</name>
     
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>slice &amp; splice</title>
-    <link href="http://yoursite.com/2017/08/22/sliceandsplice/"/>
-    <id>http://yoursite.com/2017/08/22/sliceandsplice/</id>
+    <link href="https://stevens1995.github.io/2017/08/22/sliceandsplice/"/>
+    <id>https://stevens1995.github.io/2017/08/22/sliceandsplice/</id>
     <published>2017-08-22T11:30:36.000Z</published>
     <updated>2017-08-28T14:16:26.989Z</updated>
     
@@ -42,17 +42,17 @@
     
     </summary>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>sass</title>
-    <link href="http://yoursite.com/2017/08/21/sass/"/>
-    <id>http://yoursite.com/2017/08/21/sass/</id>
+    <link href="https://stevens1995.github.io/2017/08/21/sass/"/>
+    <id>https://stevens1995.github.io/2017/08/21/sass/</id>
     <published>2017-08-21T15:16:47.000Z</published>
     <updated>2017-08-22T12:16:20.214Z</updated>
     
@@ -60,17 +60,17 @@
     
     </summary>
     
-      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+      <category term="css" scheme="https://stevens1995.github.io/categories/css/"/>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+      <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>FunctionalPrograming</title>
-    <link href="http://yoursite.com/2017/08/19/FunctionalPrograming/"/>
-    <id>http://yoursite.com/2017/08/19/FunctionalPrograming/</id>
+    <link href="https://stevens1995.github.io/2017/08/19/FunctionalPrograming/"/>
+    <id>https://stevens1995.github.io/2017/08/19/FunctionalPrograming/</id>
     <published>2017-08-19T09:08:07.000Z</published>
     <updated>2017-08-28T14:04:46.856Z</updated>
     
@@ -108,17 +108,17 @@
     
     </summary>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>Flex</title>
-    <link href="http://yoursite.com/2017/08/16/Flex/"/>
-    <id>http://yoursite.com/2017/08/16/Flex/</id>
+    <link href="https://stevens1995.github.io/2017/08/16/Flex/"/>
+    <id>https://stevens1995.github.io/2017/08/16/Flex/</id>
     <published>2017-08-16T11:39:48.000Z</published>
     <updated>2017-08-28T14:15:29.071Z</updated>
     
@@ -148,17 +148,17 @@
     
     </summary>
     
-      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+      <category term="css" scheme="https://stevens1995.github.io/categories/css/"/>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+      <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>CommonJS vs AMD vs ES2015module</title>
-    <link href="http://yoursite.com/2017/06/03/CommonJSvsAMDvsES2015module/"/>
-    <id>http://yoursite.com/2017/06/03/CommonJSvsAMDvsES2015module/</id>
+    <link href="https://stevens1995.github.io/2017/06/03/CommonJSvsAMDvsES2015module/"/>
+    <id>https://stevens1995.github.io/2017/06/03/CommonJSvsAMDvsES2015module/</id>
     <published>2017-06-03T09:56:41.000Z</published>
     <updated>2017-08-28T14:07:17.663Z</updated>
     
@@ -241,17 +241,17 @@
     
     </summary>
     
-      <category term="programing" scheme="http://yoursite.com/categories/programing/"/>
+      <category term="programing" scheme="https://stevens1995.github.io/categories/programing/"/>
     
     
-      <category term="programing" scheme="http://yoursite.com/tags/programing/"/>
+      <category term="programing" scheme="https://stevens1995.github.io/tags/programing/"/>
     
   </entry>
   
   <entry>
     <title>javascript中几个概念</title>
-    <link href="http://yoursite.com/2017/05/30/javascript%E4%B8%AD%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5/"/>
-    <id>http://yoursite.com/2017/05/30/javascript中几个概念/</id>
+    <link href="https://stevens1995.github.io/2017/05/30/javascript%E4%B8%AD%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5/"/>
+    <id>https://stevens1995.github.io/2017/05/30/javascript中几个概念/</id>
     <published>2017-05-30T08:28:50.000Z</published>
     <updated>2017-08-28T14:15:43.531Z</updated>
     
@@ -284,17 +284,17 @@
     
     </summary>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>undefined和null</title>
-    <link href="http://yoursite.com/2017/05/30/undefined%E5%92%8Cnull/"/>
-    <id>http://yoursite.com/2017/05/30/undefined和null/</id>
+    <link href="https://stevens1995.github.io/2017/05/30/undefined%E5%92%8Cnull/"/>
+    <id>https://stevens1995.github.io/2017/05/30/undefined和null/</id>
     <published>2017-05-30T06:53:14.000Z</published>
     <updated>2017-08-28T14:16:41.330Z</updated>
     
@@ -312,17 +312,17 @@
     
     </summary>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>top和left属性值问题</title>
-    <link href="http://yoursite.com/2017/05/22/top%E5%92%8Cleft%E5%B1%9E%E6%80%A7%E5%80%BC%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2017/05/22/top和left属性值问题/</id>
+    <link href="https://stevens1995.github.io/2017/05/22/top%E5%92%8Cleft%E5%B1%9E%E6%80%A7%E5%80%BC%E9%97%AE%E9%A2%98/"/>
+    <id>https://stevens1995.github.io/2017/05/22/top和left属性值问题/</id>
     <published>2017-05-22T07:33:10.000Z</published>
     <updated>2017-08-28T14:16:33.619Z</updated>
     
@@ -335,17 +335,17 @@
     
     </summary>
     
-      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+      <category term="css" scheme="https://stevens1995.github.io/categories/css/"/>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+      <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>javascript中的this</title>
-    <link href="http://yoursite.com/2017/05/16/javascript%E4%B8%AD%E7%9A%84this/"/>
-    <id>http://yoursite.com/2017/05/16/javascript中的this/</id>
+    <link href="https://stevens1995.github.io/2017/05/16/javascript%E4%B8%AD%E7%9A%84this/"/>
+    <id>https://stevens1995.github.io/2017/05/16/javascript中的this/</id>
     <published>2017-05-16T11:40:54.000Z</published>
     <updated>2017-08-28T14:16:01.401Z</updated>
     
@@ -373,17 +373,17 @@
     
     </summary>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>JS传递参数问题</title>
-    <link href="http://yoursite.com/2017/05/12/JS%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2017/05/12/JS传递参数问题/</id>
+    <link href="https://stevens1995.github.io/2017/05/12/JS%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/"/>
+    <id>https://stevens1995.github.io/2017/05/12/JS传递参数问题/</id>
     <published>2017-05-12T02:49:20.000Z</published>
     <updated>2017-08-28T14:16:18.479Z</updated>
     
@@ -403,17 +403,17 @@
     
     </summary>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>clear工作原理</title>
-    <link href="http://yoursite.com/2017/05/07/clear%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
-    <id>http://yoursite.com/2017/05/07/clear工作原理/</id>
+    <link href="https://stevens1995.github.io/2017/05/07/clear%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>https://stevens1995.github.io/2017/05/07/clear工作原理/</id>
     <published>2017-05-07T08:27:19.000Z</published>
     <updated>2017-08-28T14:05:24.603Z</updated>
     
@@ -438,17 +438,17 @@
     
     </summary>
     
-      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+      <category term="css" scheme="https://stevens1995.github.io/categories/css/"/>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+      <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript getter and setter</title>
-    <link href="http://yoursite.com/2017/05/07/javaScript%20getter%20and%20setter/"/>
-    <id>http://yoursite.com/2017/05/07/javaScript getter and setter/</id>
+    <link href="https://stevens1995.github.io/2017/05/07/javaScript%20getter%20and%20setter/"/>
+    <id>https://stevens1995.github.io/2017/05/07/javaScript getter and setter/</id>
     <published>2017-05-07T03:22:41.000Z</published>
     <updated>2017-08-28T14:16:10.599Z</updated>
     
@@ -490,10 +490,10 @@
     
     </summary>
     
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
     
   </entry>
   
