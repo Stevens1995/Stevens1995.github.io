@@ -1,0 +1,65 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> CommonJS vs AMD vs ES2015module · Hexo</title><meta name="description" content="CommonJS vs AMD vs ES2015module - John Doe"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="Hexo"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/sunchongsheng" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/pinggod" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">CommonJS vs AMD vs ES2015module</h1><div class="post-info">Jun 3, 2017</div><div class="post-content"><h4>常见的JavaScript模块系统总结，不同标准的特点以及区别。</h4>
+
+<p>参考并翻译此文章: <a href="https://auth0.com/blog/javascript-module-systems-showdown/" target="_blank" rel="external">https://auth0.com/blog/javascript-module-systems-showdown/</a></p>
+<p><strong><em>COMMONJS:</em></strong></p>
+<p>CommonJS致力于定义一系列的规范来帮助进行服务端的JavaScript开发。其中一个CommonJS尝试解决的领</p>
+<p>域就是模块化。Node.js开发者最初打算遵循CommonJS规范，但是后来决定放弃。但是node.js的实现很大</p>
+<p>程度上受到了CommonJS的影响。（也就是说node.js并没有完全遵循CommonJS规范）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// In circle.js</span></div><div class="line"><span class="keyword">const</span> PI = <span class="built_in">Math</span>.PI;</div><div class="line"></div><div class="line">exports.area = <span class="function">(<span class="params">r</span>) =&gt;</span> PI * r * r;</div><div class="line"></div><div class="line">exports.circumference = <span class="function">(<span class="params">r</span>) =&gt;</span> <span class="number">2</span> * PI * r;</div><div class="line"></div><div class="line"><span class="comment">// In some file</span></div><div class="line"><span class="keyword">const</span> circle = <span class="built_in">require</span>(<span class="string">'./circle.js'</span>);</div><div class="line"><span class="built_in">console</span>.log( <span class="string">`The area of a circle of radius 4 is <span class="subst">$&#123;circle.area(<span class="number">4</span>)&#125;</span>`</span>);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><strong>“Forget CommonJS. It’s dead. We are server side JavaScript.” - NPM creator Isaac Z. Schlueter quoting Node.js creator Ryan Dahl</strong> </p>
+<p>在Node.js中，模块系统抽象为库的形式，这减小了Node.js和CommonJS的差异。在这片文章中我们只谈论一些</p>
+<p>在二者中大致相同的功能。</p>
+<p>在Node.js和CommonJS中，本质上都是用两个对象来和模块系统进行交换：<code>require</code>和<code>exports</code>。</p>
+<p><code>require</code>是一个函数，用来将其他模块导入到当前作用域。传递给<code>require</code>的参数时模块的id。</p>
+<p>在node.js中，是在<code>node_modules</code>文件夹下的模块名。（如果不是，也可以传递文件的路径）<code>exports</code></p>
+<p>是一个特殊的对象，任何传递到其中的对象或者变量将会作为公共元素导出。Node和CommonJS一个奇特的区别在于</p>
+<p><code>module.exports</code>对象。在Node中，<code>module.exports</code>是一个特殊的会被导出的对象，<code>exports</code>是一个默认绑定到</p>
+<p><code>module.exports</code>的变量。CommonJS中则没有<code>module.exports</code>对象。这在实际应用中体现在，</p>
+<p>Node必须通过<code>module.exports</code>导出一个对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// This won't work, replacing exports entirely breaks the binding to</span></div><div class="line"><span class="comment">// modules.exports.</span></div><div class="line">exports =  <span class="function">(<span class="params">width</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    area: <span class="function"><span class="params">()</span> =&gt;</span> width * width</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// This works as expected.</span></div><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">width</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    area: <span class="function"><span class="params">()</span> =&gt;</span> width * width</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>CommonJS模块是为服务端开发进行设计。API是同步的，换句话说，模块按照他们在文件中<code>require</code>的时间和顺序进行加载。</p>
+<p><strong>CommonJS modules were designed with serve development in mind.</strong></p>
+<p>优点：</p>
+<p>1.简单：开发者能够轻易理解。</p>
+<p>2.依赖管理集成：模块可以<code>require</code>其他模块并且按需要加载。</p>
+<p>3.<code>require</code>可以在任何地方被调用：模块可以以编程的方式加载。</p>
+<p>4.支持循环依赖</p>
+<p>缺点：</p>
+<p>1.同步的API使他不适合某些用途。（客户端）。</p>
+<p>2.一个模块一个文件</p>
+<p>3.Browsers require a loader library or transpiling.</p>
+<p>4.没有模块的构造函数 (Node支持).</p>
+<p>5.Hard to analyze for static code analyzers.</p>
+<p>CommonJS的实现: <code>Node.js</code></p>
+<p><br><br><br><br><strong>AMD(Asynchronous Module Definition):</strong></p>
+<p>AMD出自一群对CommonJS采用的方向感到不满的开发者。事实上，AMD was split from CommonJS early in its development。</p>
+<p>AMD与CommonJS的不同之处在于AMD对于模块异步加载的支持。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Calling define with a dependency array and a factory function</span></div><div class="line">define([<span class="string">'dep1'</span>, <span class="string">'dep2'</span>], <span class="function"><span class="keyword">function</span> (<span class="params">dep1, dep2</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">//Define the module value by returning a value.</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// Or:</span></div><div class="line">define(<span class="function"><span class="keyword">function</span> (<span class="params">require</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> dep1 = <span class="built_in">require</span>(<span class="string">'dep1'</span>),</div><div class="line">        dep2 = <span class="built_in">require</span>(<span class="string">'dep2'</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>使用javascript传统闭包的用法让异步加载成为可能:在请求的模块加载完成时调用回调函数。</p>
+<p>模块的定义和模块的导入由同一个函数承载。当一个模块被定义，他的依赖就明确下来。因此，</p>
+<p>AMD加载器在运行时拥有给定项目的完整的依赖图。 没有依赖关系的模块就能够同时加载。这</p>
+<p>对于浏览器来说尤其重要，启动时间对于用户体验至关重要。</p>
+<p>优点：<br>1.异步加载(更快的启动时间)</p>
+<p>2.支持循环依赖</p>
+<p>3.Dependency management fully integrated.</p>
+<p>4.兼容<code>require</code>和<code>exports</code></p>
+<p>5.如果需要的话一个模块可以分到多个文件中。</p>
+<p>6.支持构造函数。</p>
+<p>7.插件支持。（自定义加载步骤）</p>
+<p>缺点：<br>1.略微复杂的语法</p>
+<p>2.Loader libraries are required unless transpiled.</p>
+<p>3.Hard to analyze for static code analyzers.</p>
+<p>AMD实现：目前比较受欢迎的实现由<code>Require.js</code>和<code>Dojo</code></p>
+<p><br><br><br><br><strong>ES2015：</strong></p>
+<p>幸运的是，JavaScript背后负责标准化的ECMA团队决定处理模块问题。</p>
+<p>解决的结果能在最近发布的JavaScript标准中看到：ECMAScript2015（ECMAScript6）</p>
+<p>结果在语法上更令人愉悦，并且兼容同步和异步模式。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//------ lib.js ------</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> sqrt = <span class="built_in">Math</span>.sqrt;</div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">diag</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> sqrt(square(x) + square(y));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//------ main.js ------</span></div><div class="line"><span class="keyword">import</span> &#123; square, diag &#125; <span class="keyword">from</span> <span class="string">'lib'</span>;</div><div class="line"><span class="built_in">console</span>.log(square(<span class="number">11</span>)); <span class="comment">// 121</span></div><div class="line"><span class="built_in">console</span>.log(diag(<span class="number">4</span>, <span class="number">3</span>)); <span class="comment">// 5</span></div></pre></td></tr></table></figure>
+<p><code>import</code>能用于将模块引入命名空间，<code>import</code>指令与<code>require</code>和<code>define</code>指令对比</p>
+<p>来说不是动态的。（也就是说不能在所有地方调用）。<code>export</code>指令能够明确地将公开</p>
+<p>元素</p>
+<p><code>import</code>和<code>export</code>指令的静态特性允许静态分析器构建完整的依赖关系树，而不运行代码。</p>
+<p><strong>最新ECMAScript标准支持动态加载模块，这是ECMAScript标准未来发布版本的提案。</strong></p>
+<p>ES2015实现：目前木有。</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/08/16/Flex/" class="prev">上一篇</a><a href="/2017/05/30/javascript中几个概念/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2017 <a href="http://yoursite.com">John Doe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>

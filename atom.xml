@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-08-28T14:16:26.989Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>slice &amp; splice</title>
+    <link href="http://yoursite.com/2017/08/22/sliceandsplice/"/>
+    <id>http://yoursite.com/2017/08/22/sliceandsplice/</id>
+    <published>2017-08-22T11:30:36.000Z</published>
+    <updated>2017-08-28T14:16:26.989Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Array.prototype.slice &amp; Array.prototype.splice</h4>
+
+<p>Array.prototype.slice 返回从开始索引到结束索引的数组(不包括结束)，不改变原数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.slice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">//[1,2]</span></div></pre></td></tr></table></figure>
+<p>Array.prototype.splce 从开始索引删除指定个数的元素(包括开始)，改变原数组，返回删除的元素组成的数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.splice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">// [1,2]</span></div><div class="line">a <span class="comment">//[3,4,5]</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Array.prototype.slice &amp;amp; Array.prototype.splice&lt;/h4&gt;
+
+&lt;p&gt;Array.prototype.slice 返回从开始索引到结束索引的数组(不包括结束)，不改变原数组&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;a.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;span class=&quot;comment&quot;&gt;//[1,2]&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Array.prototype.splce 从开始索引删除指定个数的元素(包括开始)，改变原数组，返回删除的元素组成的数组&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;a.splice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;span class=&quot;comment&quot;&gt;// [1,2]&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;a &lt;span class=&quot;comment&quot;&gt;//[3,4,5]&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sass</title>
+    <link href="http://yoursite.com/2017/08/21/sass/"/>
+    <id>http://yoursite.com/2017/08/21/sass/</id>
+    <published>2017-08-21T15:16:47.000Z</published>
+    <updated>2017-08-22T12:16:20.214Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FunctionalPrograming</title>
+    <link href="http://yoursite.com/2017/08/19/FunctionalPrograming/"/>
+    <id>http://yoursite.com/2017/08/19/FunctionalPrograming/</id>
+    <published>2017-08-19T09:08:07.000Z</published>
+    <updated>2017-08-28T14:04:46.856Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Functional Programing(函数式编程)</h4>
+
+
+<p>函数式编程(Functional Programing、FP)通过构建纯函数来编程，避免了状态共享(shared state)、可变的数据(mutable data)、副作用(side-effects)。函数式编程是声明式(declarative)而不是命令式(imperative)的编程。</p>
+<p>函数式编程是一种编程方法、模式，类同于面向对象编程、过程式编程。</p>
+<a id="more"></a>
+<h5>掌握函数式编程需要理解的几个概念：</h5>
+
+<p>纯函数(pure function)、函数组合(function composition)、避免共享状态(avoid shared state)、避免突变状态(avoid mutation state)、避免副作用(avoid side-effects)</p>
+<h6>纯函数是拥有以下特性的函数：</h6>  
+
+<p>1.相同的输入对应相同的输出<br>2.没有副作用</p>
+<p>并且，纯函数有许多对函数式编程来说很重要的特性，比如引用透明性(referential transparency，指可以用函数的返回值替代函数而不对代码的含义产生影响)</p>
+<h6>函数组合：</h6><br>将多个函数组合起来以产生一个新的函数或者执行某些计算，e.g.f(g(x))<br><br><h6>共享状态(shared state)：</h6><br>共享状态可以包含以下情形：共享作用域中的变量、对象或者内存空间，在多个作用域中传递的对象的属性<br><br>共享状态的弊端：<br>1.改变函数的执行顺序和时间会产生一些不同的结果<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> x = &#123;</div><div class="line">	val:<span class="number">2</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> x1 = <span class="function"><span class="params">()</span>=&gt;</span>x.val+=<span class="number">1</span>;</div><div class="line"><span class="keyword">const</span> x2 = <span class="function"><span class="params">()</span>=&gt;</span>x.val*=<span class="number">2</span>;</div><div class="line"></div><div class="line">x1();</div><div class="line">x2(); </div><div class="line"><span class="built_in">console</span>.log(x.val); <span class="comment">//6</span></div><div class="line"></div><div class="line"><span class="comment">//another order</span></div><div class="line">x2();</div><div class="line">x1();</div><div class="line"><span class="built_in">console</span>.log(x.val)<span class="comment">//5</span></div></pre></td></tr></table></figure><br><br>避免了共享状态后，函数的顺序不会影响执行结果：<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> y = &#123;</div><div class="line">	val:<span class="number">2</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> y1 = <span class="function"><span class="params">y</span>=&gt;</span><span class="built_in">Object</span>.assign(&#123;&#125;,y,&#123; <span class="attr">val</span>:x.val+<span class="number">1</span>&#125;);</div><div class="line"><span class="keyword">const</span> y2 = <span class="function"><span class="params">y</span>=&gt;</span><span class="built_in">Object</span>.assign(&#123;&#125;,y,&#123; <span class="attr">val</span>:x.val*<span class="number">2</span>&#125;);</div><div class="line"></div><div class="line"><span class="comment">//在此你可以执行任意的代码，而不会影响到后面的输出，因为函数不依赖于后面执行函数的依赖的状态</span></div><div class="line">y1();</div><div class="line">y2();</div><div class="line"></div><div class="line"><span class="comment">//或者</span></div><div class="line">y2();</div><div class="line">y1();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(y1(y2(y).val));</div></pre></td></tr></table></figure><br><br><h6>永恒性(immutability):</h6>
+
+<p>不能通过const来定义不可变的对象，const只是指定变量的引用的对象不能改变，可以改变对象的属性。</p>
+<p>Object.freeze()方法也不能完全是对象不可变，比如对象中又有对象，除非使用Object.freeze()方法来封住每一层的对象。</p>
+<h6>副作用：</h6>
+
+<p>在函数式编程中，副作用指的是任何在调用的函数之外可以检测到的应用程序状态的改变。</p>
+<h5>通过高阶函数的可重用性(reusability though high order function)：</h5>
+
+<h5></h5>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Functional Programing(函数式编程)&lt;/h4&gt;
+
+
+&lt;p&gt;函数式编程(Functional Programing、FP)通过构建纯函数来编程，避免了状态共享(shared state)、可变的数据(mutable data)、副作用(side-effects)。函数式编程是声明式(declarative)而不是命令式(imperative)的编程。&lt;/p&gt;
+&lt;p&gt;函数式编程是一种编程方法、模式，类同于面向对象编程、过程式编程。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flex</title>
+    <link href="http://yoursite.com/2017/08/16/Flex/"/>
+    <id>http://yoursite.com/2017/08/16/Flex/</id>
+    <published>2017-08-16T11:39:48.000Z</published>
+    <updated>2017-08-28T14:15:29.071Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Flex</h4>
+
+<p>Flex容器中的项目<code>Flex</code>属性简写</p>
+<p><code>flex:1 0 150px;</code><br>这个简写能被拆分成三个属性：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">flex-grow:<span class="number">1</span>;</div><div class="line"></div><div class="line">flex-shrink:<span class="number">0</span>;</div><div class="line"></div><div class="line">felx-basis:<span class="number">150</span>px;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h5>flex-grow</h5>
+
+<p>定义容器中项目的增长，当容器空间有剩余时，计算方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">增长的长度 = 剩余空间 × (某个项目的flex-grow属性值/所有项目flex-grow属性值的和)</div></pre></td></tr></table></figure>
+<h5>flex-shrink</h5>
+
+<p>定义容器中项目的收缩，当容器空间不够时，计算方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">总和 = 每个项目的flex-shrink的值 × 项目的flex-basis值</div><div class="line"></div><div class="line">项目缩小的长度 = 超过的空间 × (每个项目的flex-shrink的值×项目的flex-basis)</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Flex&lt;/h4&gt;
+
+&lt;p&gt;Flex容器中的项目&lt;code&gt;Flex&lt;/code&gt;属性简写&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;flex:1 0 150px;&lt;/code&gt;&lt;br&gt;这个简写能被拆分成三个属性：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;flex-grow:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;flex-shrink:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;felx-basis:&lt;span class=&quot;number&quot;&gt;150&lt;/span&gt;px;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CommonJS vs AMD vs ES2015module</title>
+    <link href="http://yoursite.com/2017/06/03/CommonJSvsAMDvsES2015module/"/>
+    <id>http://yoursite.com/2017/06/03/CommonJSvsAMDvsES2015module/</id>
+    <published>2017-06-03T09:56:41.000Z</published>
+    <updated>2017-08-28T14:07:17.663Z</updated>
+    
+    <content type="html"><![CDATA[<h4>常见的JavaScript模块系统总结，不同标准的特点以及区别。</h4>
+
+<p>参考并翻译此文章: <a href="https://auth0.com/blog/javascript-module-systems-showdown/" target="_blank" rel="external">https://auth0.com/blog/javascript-module-systems-showdown/</a></p>
+<p><strong><em>COMMONJS:</em></strong></p>
+<p>CommonJS致力于定义一系列的规范来帮助进行服务端的JavaScript开发。其中一个CommonJS尝试解决的领</p>
+<p>域就是模块化。Node.js开发者最初打算遵循CommonJS规范，但是后来决定放弃。但是node.js的实现很大</p>
+<p>程度上受到了CommonJS的影响。（也就是说node.js并没有完全遵循CommonJS规范）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// In circle.js</span></div><div class="line"><span class="keyword">const</span> PI = <span class="built_in">Math</span>.PI;</div><div class="line"></div><div class="line">exports.area = <span class="function">(<span class="params">r</span>) =&gt;</span> PI * r * r;</div><div class="line"></div><div class="line">exports.circumference = <span class="function">(<span class="params">r</span>) =&gt;</span> <span class="number">2</span> * PI * r;</div><div class="line"></div><div class="line"><span class="comment">// In some file</span></div><div class="line"><span class="keyword">const</span> circle = <span class="built_in">require</span>(<span class="string">'./circle.js'</span>);</div><div class="line"><span class="built_in">console</span>.log( <span class="string">`The area of a circle of radius 4 is <span class="subst">$&#123;circle.area(<span class="number">4</span>)&#125;</span>`</span>);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><strong>“Forget CommonJS. It’s dead. We are server side JavaScript.” - NPM creator Isaac Z. Schlueter quoting Node.js creator Ryan Dahl</strong> </p>
+<p>在Node.js中，模块系统抽象为库的形式，这减小了Node.js和CommonJS的差异。在这片文章中我们只谈论一些</p>
+<p>在二者中大致相同的功能。</p>
+<p>在Node.js和CommonJS中，本质上都是用两个对象来和模块系统进行交换：<code>require</code>和<code>exports</code>。</p>
+<p><code>require</code>是一个函数，用来将其他模块导入到当前作用域。传递给<code>require</code>的参数时模块的id。</p>
+<p>在node.js中，是在<code>node_modules</code>文件夹下的模块名。（如果不是，也可以传递文件的路径）<code>exports</code></p>
+<p>是一个特殊的对象，任何传递到其中的对象或者变量将会作为公共元素导出。Node和CommonJS一个奇特的区别在于</p>
+<p><code>module.exports</code>对象。在Node中，<code>module.exports</code>是一个特殊的会被导出的对象，<code>exports</code>是一个默认绑定到</p>
+<p><code>module.exports</code>的变量。CommonJS中则没有<code>module.exports</code>对象。这在实际应用中体现在，</p>
+<p>Node必须通过<code>module.exports</code>导出一个对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// This won't work, replacing exports entirely breaks the binding to</span></div><div class="line"><span class="comment">// modules.exports.</span></div><div class="line">exports =  <span class="function">(<span class="params">width</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    area: <span class="function"><span class="params">()</span> =&gt;</span> width * width</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// This works as expected.</span></div><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">width</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    area: <span class="function"><span class="params">()</span> =&gt;</span> width * width</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>CommonJS模块是为服务端开发进行设计。API是同步的，换句话说，模块按照他们在文件中<code>require</code>的时间和顺序进行加载。</p>
+<p><strong>CommonJS modules were designed with serve development in mind.</strong></p>
+<p>优点：</p>
+<p>1.简单：开发者能够轻易理解。</p>
+<p>2.依赖管理集成：模块可以<code>require</code>其他模块并且按需要加载。</p>
+<p>3.<code>require</code>可以在任何地方被调用：模块可以以编程的方式加载。</p>
+<p>4.支持循环依赖</p>
+<p>缺点：</p>
+<p>1.同步的API使他不适合某些用途。（客户端）。</p>
+<p>2.一个模块一个文件</p>
+<p>3.Browsers require a loader library or transpiling.</p>
+<p>4.没有模块的构造函数 (Node支持).</p>
+<p>5.Hard to analyze for static code analyzers.</p>
+<p>CommonJS的实现: <code>Node.js</code></p>
+<p><br><br><br><br><strong>AMD(Asynchronous Module Definition):</strong></p>
+<p>AMD出自一群对CommonJS采用的方向感到不满的开发者。事实上，AMD was split from CommonJS early in its development。</p>
+<p>AMD与CommonJS的不同之处在于AMD对于模块异步加载的支持。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Calling define with a dependency array and a factory function</span></div><div class="line">define([<span class="string">'dep1'</span>, <span class="string">'dep2'</span>], <span class="function"><span class="keyword">function</span> (<span class="params">dep1, dep2</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">//Define the module value by returning a value.</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// Or:</span></div><div class="line">define(<span class="function"><span class="keyword">function</span> (<span class="params">require</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> dep1 = <span class="built_in">require</span>(<span class="string">'dep1'</span>),</div><div class="line">        dep2 = <span class="built_in">require</span>(<span class="string">'dep2'</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>使用javascript传统闭包的用法让异步加载成为可能:在请求的模块加载完成时调用回调函数。</p>
+<p>模块的定义和模块的导入由同一个函数承载。当一个模块被定义，他的依赖就明确下来。因此，</p>
+<p>AMD加载器在运行时拥有给定项目的完整的依赖图。 没有依赖关系的模块就能够同时加载。这</p>
+<p>对于浏览器来说尤其重要，启动时间对于用户体验至关重要。</p>
+<p>优点：<br>1.异步加载(更快的启动时间)</p>
+<p>2.支持循环依赖</p>
+<p>3.Dependency management fully integrated.</p>
+<p>4.兼容<code>require</code>和<code>exports</code></p>
+<p>5.如果需要的话一个模块可以分到多个文件中。</p>
+<p>6.支持构造函数。</p>
+<p>7.插件支持。（自定义加载步骤）</p>
+<p>缺点：<br>1.略微复杂的语法</p>
+<p>2.Loader libraries are required unless transpiled.</p>
+<p>3.Hard to analyze for static code analyzers.</p>
+<p>AMD实现：目前比较受欢迎的实现由<code>Require.js</code>和<code>Dojo</code></p>
+<p><br><br><br><br><strong>ES2015：</strong></p>
+<p>幸运的是，JavaScript背后负责标准化的ECMA团队决定处理模块问题。</p>
+<p>解决的结果能在最近发布的JavaScript标准中看到：ECMAScript2015（ECMAScript6）</p>
+<p>结果在语法上更令人愉悦，并且兼容同步和异步模式。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//------ lib.js ------</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> sqrt = <span class="built_in">Math</span>.sqrt;</div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> x * x;</div><div class="line">&#125;</div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">diag</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> sqrt(square(x) + square(y));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//------ main.js ------</span></div><div class="line"><span class="keyword">import</span> &#123; square, diag &#125; <span class="keyword">from</span> <span class="string">'lib'</span>;</div><div class="line"><span class="built_in">console</span>.log(square(<span class="number">11</span>)); <span class="comment">// 121</span></div><div class="line"><span class="built_in">console</span>.log(diag(<span class="number">4</span>, <span class="number">3</span>)); <span class="comment">// 5</span></div></pre></td></tr></table></figure>
+<p><code>import</code>能用于将模块引入命名空间，<code>import</code>指令与<code>require</code>和<code>define</code>指令对比</p>
+<p>来说不是动态的。（也就是说不能在所有地方调用）。<code>export</code>指令能够明确地将公开</p>
+<p>元素</p>
+<p><code>import</code>和<code>export</code>指令的静态特性允许静态分析器构建完整的依赖关系树，而不运行代码。</p>
+<p><strong>最新ECMAScript标准支持动态加载模块，这是ECMAScript标准未来发布版本的提案。</strong></p>
+<p>ES2015实现：目前木有。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;常见的JavaScript模块系统总结，不同标准的特点以及区别。&lt;/h4&gt;
+
+&lt;p&gt;参考并翻译此文章: &lt;a href=&quot;https://auth0.com/blog/javascript-module-systems-showdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://auth0.com/blog/javascript-module-systems-showdown/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;COMMONJS:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CommonJS致力于定义一系列的规范来帮助进行服务端的JavaScript开发。其中一个CommonJS尝试解决的领&lt;/p&gt;
+&lt;p&gt;域就是模块化。Node.js开发者最初打算遵循CommonJS规范，但是后来决定放弃。但是node.js的实现很大&lt;/p&gt;
+&lt;p&gt;程度上受到了CommonJS的影响。（也就是说node.js并没有完全遵循CommonJS规范）。&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// In circle.js&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; PI = &lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.PI;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;exports.area = &lt;span class=&quot;function&quot;&gt;(&lt;span class=&quot;params&quot;&gt;r&lt;/span&gt;) =&amp;gt;&lt;/span&gt; PI * r * r;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;exports.circumference = &lt;span class=&quot;function&quot;&gt;(&lt;span class=&quot;params&quot;&gt;r&lt;/span&gt;) =&amp;gt;&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; * PI * r;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// In some file&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; circle = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;./circle.js&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log( &lt;span class=&quot;string&quot;&gt;`The area of a circle of radius 4 is &lt;span class=&quot;subst&quot;&gt;$&amp;#123;circle.area(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;)&amp;#125;&lt;/span&gt;`&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="programing" scheme="http://yoursite.com/categories/programing/"/>
+    
+    
+      <category term="programing" scheme="http://yoursite.com/tags/programing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript中几个概念</title>
+    <link href="http://yoursite.com/2017/05/30/javascript%E4%B8%AD%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5/"/>
+    <id>http://yoursite.com/2017/05/30/javascript中几个概念/</id>
+    <published>2017-05-30T08:28:50.000Z</published>
+    <updated>2017-08-28T14:15:43.531Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于javascript中几个概念的解释:</p>
+<p><strong><em>1.执行上下文（Execution Context）</em></strong></p>
+<p>通俗来说就是函数执行时的环境，包括下面几个部分： </p>
+<p>变量对象、作用域链、this</p>
+<p><strong><em>2.活动对象（Activation Object）</em></strong></p>
+<p>形参、arguments对象、函数中定义的变量和函数</p>
+<p><strong><em>3.变量对象（Variable Object）</em></strong></p>
+<p>在全局上下文中，global object</p>
+<p>在函数中，activation object</p>
+<p><strong><em>4.作用域链 （Scope Chain）</em></strong></p>
+<p>作用域（scope）:在JavaScript中，作用域是你可以访问的变量、对象、函数的集合。<br><a id="more"></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于javascript中几个概念的解释:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;1.执行上下文（Execution Context）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通俗来说就是函数执行时的环境，包括下面几个部分： &lt;/p&gt;
+&lt;p&gt;变量对象、作用域链、this&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;2.活动对象（Activation Object）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;形参、arguments对象、函数中定义的变量和函数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;3.变量对象（Variable Object）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在全局上下文中，global object&lt;/p&gt;
+&lt;p&gt;在函数中，activation object&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;4.作用域链 （Scope Chain）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;作用域（scope）:在JavaScript中，作用域是你可以访问的变量、对象、函数的集合。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>undefined和null</title>
+    <link href="http://yoursite.com/2017/05/30/undefined%E5%92%8Cnull/"/>
+    <id>http://yoursite.com/2017/05/30/undefined和null/</id>
+    <published>2017-05-30T06:53:14.000Z</published>
+    <updated>2017-08-28T14:16:41.330Z</updated>
+    
+    <content type="html"><![CDATA[<p>网上看到很多关于undefined和null区别的解释，总结一下：</p>
+<p>版本1：<br>    undefined意味着变量已经被声明但是还没有被赋值，null可以作为一种值赋值给变量，代表没有值。<br>    undefined和null是两种不同的类型，undefined就是undefined，null是object类型<br>    对于没有赋值的变量，JavaScript会默认设置为undefined，JavaScript不会设置变量值为null，必须在程序中手动设置。</p>
+<p>版本2：<br>    undefined表示“缺少值”，表示此处该有一个值，但是还没有定义。<br>    null表示“没有对象”，即该出不应该有值。</p>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;网上看到很多关于undefined和null区别的解释，总结一下：&lt;/p&gt;
+&lt;p&gt;版本1：&lt;br&gt;    undefined意味着变量已经被声明但是还没有被赋值，null可以作为一种值赋值给变量，代表没有值。&lt;br&gt;    undefined和null是两种不同的类型，undefined就是undefined，null是object类型&lt;br&gt;    对于没有赋值的变量，JavaScript会默认设置为undefined，JavaScript不会设置变量值为null，必须在程序中手动设置。&lt;/p&gt;
+&lt;p&gt;版本2：&lt;br&gt;    undefined表示“缺少值”，表示此处该有一个值，但是还没有定义。&lt;br&gt;    null表示“没有对象”，即该出不应该有值。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>top和left属性值问题</title>
+    <link href="http://yoursite.com/2017/05/22/top%E5%92%8Cleft%E5%B1%9E%E6%80%A7%E5%80%BC%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2017/05/22/top和left属性值问题/</id>
+    <published>2017-05-22T07:33:10.000Z</published>
+    <updated>2017-08-28T14:16:33.619Z</updated>
+    
+    <content type="html"><![CDATA[<p>position为absoulate的元素，元素相对于盒子模型中的padding盒来进行定位。<br>为top、bottom、left、right等设置的值为百分比，进行计算时，top和bottom的值由padding盒的高度乘以百分比得到，left和right的值由padding盒的宽度乘以百分比得到。</p>
+<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;position为absoulate的元素，元素相对于盒子模型中的padding盒来进行定位。&lt;br&gt;为top、bottom、left、right等设置的值为百分比，进行计算时，top和bottom的值由padding盒的高度乘以百分比得到，left和right的值由padding盒的宽度乘以百分比得到。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript中的this</title>
+    <link href="http://yoursite.com/2017/05/16/javascript%E4%B8%AD%E7%9A%84this/"/>
+    <id>http://yoursite.com/2017/05/16/javascript中的this/</id>
+    <published>2017-05-16T11:40:54.000Z</published>
+    <updated>2017-08-28T14:16:01.401Z</updated>
+    
+    <content type="html"><![CDATA[<p>javascript中的<code>this</code>问题</p>
+<p>javascript中的<code>this</code>对象取决于你如何调用函数：</p>
+<p>通常来说有四种调用函数的方法：</p>
+<p>1.<code>someThing.someFunction(arg1, arg2, argN)</code></p>
+<p>2.<code>someFunction.call(someThing, arg1, arg2, argN)</code></p>
+<p>3.<code>someFunction.apply(someThing, [arg1, arg2, argN])</code></p>
+<p>上面三种调用方式，this对象都是<code>someThing</code></p>
+<p>4.<code>new someFunction(arg1,arg2,argN)</code><br>使用<code>new</code>关键字，会创建一个Object对象，<code>this</code>是这个新建的对象</p>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;javascript中的&lt;code&gt;this&lt;/code&gt;问题&lt;/p&gt;
+&lt;p&gt;javascript中的&lt;code&gt;this&lt;/code&gt;对象取决于你如何调用函数：&lt;/p&gt;
+&lt;p&gt;通常来说有四种调用函数的方法：&lt;/p&gt;
+&lt;p&gt;1.&lt;code&gt;someThing.someFunction(arg1, arg2, argN)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2.&lt;code&gt;someFunction.call(someThing, arg1, arg2, argN)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3.&lt;code&gt;someFunction.apply(someThing, [arg1, arg2, argN])&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;上面三种调用方式，this对象都是&lt;code&gt;someThing&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;4.&lt;code&gt;new someFunction(arg1,arg2,argN)&lt;/code&gt;&lt;br&gt;使用&lt;code&gt;new&lt;/code&gt;关键字，会创建一个Object对象，&lt;code&gt;this&lt;/code&gt;是这个新建的对象&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS传递参数问题</title>
+    <link href="http://yoursite.com/2017/05/12/JS%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2017/05/12/JS传递参数问题/</id>
+    <published>2017-05-12T02:49:20.000Z</published>
+    <updated>2017-08-28T14:16:18.479Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于js中函数传递参数时到底是传递值还是传递引用</p>
+<p>参考下面代码:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStuff</span>(<span class="params">a, b, c</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">  a = a * <span class="number">10</span>;</div><div class="line">  b.item = <span class="string">"changed"</span>;</div><div class="line">  c = &#123;<span class="attr">item</span>: <span class="string">"changed"</span>&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"></div><div class="line">changeStuff(num, obj1, obj2);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num);</div><div class="line"><span class="built_in">console</span>.log(obj1.item);    </div><div class="line"><span class="built_in">console</span>.log(obj2.item);</div></pre></td></tr></table></figure></p>
+<p>输出结果是:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">10</span></div><div class="line">changed</div><div class="line">unchanged</div></pre></td></tr></table></figure></p>
+<p>如果js中全部都是按值传递，那么obj1.item应该不被改变。如果js中全部是按引用传递，那么obj2.item和num应该被改变。<br>实际上，<strong>js中所有的参数都是按值传递</strong>，只不过<strong>有些参数的值本身就是一个引用</strong>，如果改变参数本身的话（比如num和obj1)，不会对外部产生影响，如果改变参数内部属性的话，改变就会应用到函数外部，应用到引用所指向的内存中。</p>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于js中函数传递参数时到底是传递值还是传递引用&lt;/p&gt;
+&lt;p&gt;参考下面代码:&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;changeStuff&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;a, b, c&lt;/span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  a = a * &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  b.item = &lt;span class=&quot;string&quot;&gt;&quot;changed&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  c = &amp;#123;&lt;span class=&quot;attr&quot;&gt;item&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;changed&quot;&lt;/span&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; num = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; obj1 = &amp;#123;&lt;span class=&quot;attr&quot;&gt;item&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;unchanged&quot;&lt;/span&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; obj2 = &amp;#123;&lt;span class=&quot;attr&quot;&gt;item&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;unchanged&quot;&lt;/span&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;changeStuff(num, obj1, obj2);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(num);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(obj1.item);    &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(obj2.item);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;输出结果是:&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;changed&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;unchanged&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果js中全部都是按值传递，那么obj1.item应该不被改变。如果js中全部是按引用传递，那么obj2.item和num应该被改变。&lt;br&gt;实际上，&lt;strong&gt;js中所有的参数都是按值传递&lt;/strong&gt;，只不过&lt;strong&gt;有些参数的值本身就是一个引用&lt;/strong&gt;，如果改变参数本身的话（比如num和obj1)，不会对外部产生影响，如果改变参数内部属性的话，改变就会应用到函数外部，应用到引用所指向的内存中。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>clear工作原理</title>
+    <link href="http://yoursite.com/2017/05/07/clear%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2017/05/07/clear工作原理/</id>
+    <published>2017-05-07T08:27:19.000Z</published>
+    <updated>2017-08-28T14:05:24.603Z</updated>
+    
+    <content type="html"><![CDATA[<p>对元素使用clear属性时，表示清除元素周围的浮动。</p>
+<p>clear清除浮动时，<strong>对添加clear属性的元素本身起作用</strong>。比如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">	div&#123;</span></div><div class="line"><span class="undefined">		width: 100px;</span></div><div class="line"><span class="undefined">		height: 100px;</span></div><div class="line"><span class="undefined">		background: red;</span></div><div class="line"><span class="undefined">		float: left;</span></div><div class="line"><span class="undefined">	&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>对1号元素添加clear属性并不起作用，1和2两个块还是在同一行，向左浮动，因为1号元素前面没有其他元素。</p>
+<p>只有对2号元素使用clear时<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>2号元素换行。</p>
+<p><strong>只对前面的代码起作用</strong>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">	div&#123;</span></div><div class="line"><span class="undefined">		width: 100px;</span></div><div class="line"><span class="undefined">		height: 100px;</span></div><div class="line"><span class="undefined">		background: red;</span></div><div class="line"><span class="undefined">		float: left;</span></div><div class="line"><span class="undefined">	&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>三个元素均设置为向左浮动，为中间的元素添加 <strong>clear:both</strong>，<strong>div3</strong>还是和 <strong>div2</strong>在一行，因为clear只对前面的代码起作用所以2号元素换行后还是和3号元素在一起。</p>
+<p>技巧:所有使用<strong>clear:left</strong>或者<strong>clear:right</strong>的地方都可以使用<strong>clear</strong>代替。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对元素使用clear属性时，表示清除元素周围的浮动。&lt;/p&gt;
+&lt;p&gt;clear清除浮动时，&lt;strong&gt;对添加clear属性的元素本身起作用&lt;/strong&gt;。比如:&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;	div&amp;#123;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;		width: 100px;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;		height: 100px;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;		background: red;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;		float: left;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;style&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;clear:both;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+    
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript getter and setter</title>
+    <link href="http://yoursite.com/2017/05/07/javaScript%20getter%20and%20setter/"/>
+    <id>http://yoursite.com/2017/05/07/javaScript getter and setter/</id>
+    <published>2017-05-07T03:22:41.000Z</published>
+    <updated>2017-08-28T14:16:10.599Z</updated>
+    
+    <content type="html"><![CDATA[<p>javaScript getter and setter</p>
+<p>For the most part, in JavaScript, what you see is what you get. A value’s a value; there are no tricks. Sometimes however, you want a value that’s based on some other values: someone’s full name, for example, is a concatenation of their first and last names. If you have a person object, and you want the users of that object to be able to set the full, first or last name, and see that change immediately reflected in the other values, you’d conventionally build it with functions:</p>
+<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">person.setLastName(<span class="string">'Smith'</span>); </div><div class="line">person.setFirstName(<span class="string">'Jimmy'</span>); </div><div class="line">person.getFullName(); <span class="comment">// Jimmy Smith</span></div></pre></td></tr></table></figure>
+<p>But this is ugly, and requires the users of your object to care that the properties are related; in a more complex example, that might not be as obvious as with names. Luckily, there’s a better way, added in ECMAScript 5.</p>
+<p>Meet getters and setters.</p>
+<p>How</p>
+<p>Let’s make that person object. We want to be able to set the first name, last name or full name, and have it update the other two automagically.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    firstName: <span class="string">'Jimmy'</span>,</div><div class="line">    lastName: <span class="string">'Smith'</span>,</div><div class="line">    get fullName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName;</div><div class="line">    &#125;,</div><div class="line">    set fullName (name) &#123;</div><div class="line">        <span class="keyword">var</span> words = name.toString().split(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">this</span>.firstName = words[<span class="number">0</span>] || <span class="string">''</span>;</div><div class="line">        <span class="keyword">this</span>.lastName = words[<span class="number">1</span>] || <span class="string">''</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">person.fullName = <span class="string">'Jack Franklin'</span>;</div><div class="line"><span class="built_in">console</span>.log(person.firstName); <span class="comment">// Jack</span></div><div class="line"><span class="built_in">console</span>.log(person.lastName) <span class="comment">// Franklin</span></div></pre></td></tr></table></figure>
+<p>So what’s going on here?</p>
+<p>The get and set keywords are important. Following them is the property they relate to (fullName) and a function body that defines the behaviour when the property is accessed (name = person.fullName) or modified (person.fullName = ‘Some Name’).</p>
+<p>These two keywords define accessor functions: a getter and a setter for the fullName property. When the property is accessed, the return value from the getter is used. When a value is set, the setter is called and passed the value that was set. It’s up to you what you do with that value, but what is returned from the setter is the value that was passed in – so you don’t need to return anything.</p>
+<p>The official way: Object.defineProperty</p>
+<p>Along with the inline method of declaring getters and setters, it can also be done more explicitly via Object.defineProperty (MDN Documentation). This method takes three arguments. The first is the object to add the property to, the second is the name of the property, and the third is an object that describes the property (known as the property’s descriptor). Here’s an example that replicates the above example:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    firstName: <span class="string">'Jimmy'</span>,</div><div class="line">    lastName: <span class="string">'Smith'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">Object</span>.defineProperty(person, <span class="string">'fullName'</span>, &#123;</div><div class="line">    get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> firstName + <span class="string">' '</span> + lastName;</div><div class="line">    &#125;,</div><div class="line">    set: <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> words = name.split(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">this</span>.firstName = words[<span class="number">0</span>] || <span class="string">''</span>;</div><div class="line">        <span class="keyword">this</span>.lastName = words[<span class="number">1</span>] || <span class="string">''</span>;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>The advantage here isn’t immediately apparent. Other than being able to add properties after creating the initial object, is there a real benefit?</p>
+<p>When you define a property this way, you can do much more than just define a setter or getter. You may also pass following keys:</p>
+<p>configurable (false by default): if this is true, the property’s configuration will be modifiable in future.<br>enumerable (false by default): if true, the property will appear when looping over the object (for (var key in obj)).<br>We can also define properties that don’t have explicit getters or setters:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.defineProperty(person, <span class="string">'age'</span>, &#123;</div><div class="line">    value: <span class="number">42</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>This will create person.age, and set it to the value 42. It’s important to note that this property isn’t writable. Calling person.age = 99 will have no effect. In this way you can create read-only properties. If a property has a value key set, it cannot have a getter or setter. Properties can have values or accessors, not both.</p>
+<p>Not only that, but because the enumerable property defaults to false, this property will not appear when we loop over the object’s keys.</p>
+<p>If we wanted to make a property writable, we would need to set the writable property:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.defineProperty(person, <span class="string">'age'</span>, &#123;</div><div class="line">    value: <span class="number">42</span>,</div><div class="line">    writable: <span class="literal">true</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Now, person.age = 99; will have the desired effect.</p>
+<p>Overuse</p>
+<p>Remember: just because a feature exists, it doesn’t need to be used all the time. Getters and Setters have their use cases, but don’t go over the top, or you’ll most likely end up with a design that’s confusing for those interacting with your objects. Used carefully, they’re very powerful. But with great power comes great responsibility.</p>
+<p>Browser support?</p>
+<p>IE9 and above have full support for Object.defineProperty, along with Safari 5+, Firefox 4+, Chrome 5+ and Opera 12+. If you’re working with Node.js, there’s full support. Don’t you just love Node?!</p>
+<p>This article was authored by <a href="https://twitter.com/phuunet" target="_blank" rel="external">Tom Ashworth</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;javaScript getter and setter&lt;/p&gt;
+&lt;p&gt;For the most part, in JavaScript, what you see is what you get. A value’s a value; there are no tricks. Sometimes however, you want a value that’s based on some other values: someone’s full name, for example, is a concatenation of their first and last names. If you have a person object, and you want the users of that object to be able to set the full, first or last name, and see that change immediately reflected in the other values, you’d conventionally build it with functions:&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+</feed>
