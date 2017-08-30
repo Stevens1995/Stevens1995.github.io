@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-08-30T15:19:52.173Z</updated>
+  <updated>2017-08-30T15:23:54.042Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="https://stevens1995.github.io/2017/08/30/Flex%E8%AF%A6%E8%A7%A3/"/>
     <id>https://stevens1995.github.io/2017/08/30/Flex详解/</id>
     <published>2017-08-30T06:26:22.000Z</published>
-    <updated>2017-08-30T15:19:52.173Z</updated>
+    <updated>2017-08-30T15:23:54.042Z</updated>
     
     <content type="html"><![CDATA[<h1>Flex详解</h1>
 
 <h4>总览:</h4>
 
-<p><img src="../images/20170830/flexbox.png" alt=""></p>
+<p><img src="/images/20170830/flexbox.png" alt=""></p>
 <a id="more"></a>
 <h4>Flex container属性:</h4>
 
@@ -91,7 +91,7 @@ stretch:行伸展以填充container
 
 &lt;h4&gt;总览:&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/20170830/flexbox.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/20170830/flexbox.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
