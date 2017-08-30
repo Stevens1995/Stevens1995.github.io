@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-08-28T14:16:26.989Z</updated>
+  <updated>2017-08-30T15:15:14.007Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -14,6 +14,93 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flex详解</title>
+    <link href="https://stevens1995.github.io/2017/08/30/Flex%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://stevens1995.github.io/2017/08/30/Flex详解/</id>
+    <published>2017-08-30T06:26:22.000Z</published>
+    <updated>2017-08-30T15:15:14.007Z</updated>
+    
+    <content type="html"><![CDATA[<h1>Flex详解</h1>
+
+<h4>总览:</h4>
+
+<p><img src="../images/20170830/flexbox.png" alt=""></p>
+<h4>Flex container属性:</h4>
+
+<p><code>display:flex:</code>定义一个Flex容器</p>
+<p><code>flex-direction:</code> 建立主轴，定义项目在主轴上的排列方向 </p>
+<pre><code>row | row-reverse | column | column-reverse  
+row(默认):主轴水平方向，项目从左到右排列  
+row-reverse:主轴水平，项目从右到左  
+column:主轴垂直，项目从上到下  
+column:主轴垂直，项目从下到上
+</code></pre><p><code>flex-wrap:</code>默认的所有项目在主轴上排列，不换行，可通过flex-wrap来改变  </p>
+<pre><code>nowrap | wrap | wrap-reverse
+
+nowrap(默认):所有项目排列在主轴上不换行  
+wrap:换行，项目从顶部到底部  
+wrap-reverse:不换行，项目从底部到顶部
+</code></pre><p><code>flex-flow:</code> flex-direction 和 flex-wrap的简写</p>
+<pre><code>flex-flow: &lt;&apos;flex-direction&apos;&gt; || &lt;&apos;felx-wrap&apos;&gt;
+</code></pre><p><code>justify-content:</code>定义项目在主轴上的排列</p>
+<pre><code>flex-start | flex-end | center | space-between | space-around | space-evenly
+
+flex-start(默认):项目从主轴开始的地方开始排列  
+flex-end:从主轴结束的地方开始排列  
+center:项目排列在主轴中间  
+space-between:项目均匀分布在主轴上，第一个在开始线，最后一个在结束线，中间的项目均匀分布  
+space-around:每个项目左边和右边的空隙一样(注意，中间的间隔是左右间隔的两倍)  
+space-evenly:项目间的间隔一样(所有间隔都一样)
+</code></pre><p><code>align-items:</code>项目在交叉轴上的布局</p>
+<pre><code>flex-start | flex-end | center | stretch | baseline
+
+flex-start:项目在交叉轴的边缘从交叉轴的开始处开始  
+flex-end:项目在交叉轴的边缘从交叉轴的结束处开始  
+center:f项目处在交叉轴中间  
+baseline:项目根据基线对齐
+stretch:伸展填充container  
+</code></pre><p><code>align-content:</code>排列 主轴上的行 在交叉轴上的空间 (当主轴只有一行时这个属性不起作用)</p>
+<pre><code>flex-start | flex-end | center | space-between | space-around | stretch
+
+flex-start:行从交叉轴开始的地方排列  
+flex-end:行从交叉轴结束的地方开始排列  
+center:行在交叉轴的中间  
+space-between:行之间的间隔相等，第一行在交叉轴开始线处，最后一行在交叉轴结束线处  
+space-around:每行左右间距相同  
+stretch:行伸展以填充container
+</code></pre><h4>Flex items属性:</h4>
+
+<p><code>order:</code>定义项目排列的顺序</p>
+<p>order:<integer></integer></p>
+<p><code>flex-grow:</code>:定义项目扩大的能力，接收一个没有单位的值代表比例，决定占据多少主轴上剩余的可用空间  </p>
+<p><code>flex-shrink:</code>定义项目缩小的能力(负值无效)  </p>
+<p><code>flex-basis:</code>定义在分配剩余空间之前项目的默认大小</p>
+<p><code>flex:</code>前面三个属性的简写</p>
+<pre><code>flex: flex-grow || flex-shrink || flex-basis
+</code></pre><p><code>align-self:</code>定义个别项目在交叉轴上排列方式，这可以覆盖在container上定义的align-item属性</p>
+<p>flex-start | flex-end</p>
+<p>flex-start:从交叉轴的开始线处开始排列<br>flex-end:从交叉轴的结束线处开始排列</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1&gt;Flex详解&lt;/h1&gt;
+
+&lt;h4&gt;总览:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/20170830/flexbox.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4&gt;Flex container属性:&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;display:flex:&lt;/
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://stevens1995.github.io/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>slice &amp; splice</title>
