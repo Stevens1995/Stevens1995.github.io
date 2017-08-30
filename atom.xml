@@ -207,9 +207,9 @@ stretch:行伸展以填充container
     <link href="https://stevens1995.github.io/2017/08/16/Flex/"/>
     <id>https://stevens1995.github.io/2017/08/16/Flex/</id>
     <published>2017-08-16T11:39:48.000Z</published>
-    <updated>2017-08-28T14:15:29.071Z</updated>
+    <updated>2017-08-30T15:17:35.728Z</updated>
     
-    <content type="html"><![CDATA[<h4>Flex</h4>
+    <content type="html"><![CDATA[<h4>Flex中关于flex-grow与flex-shrink的计算</h4>
 
 <p>Flex容器中的项目<code>Flex</code>属性简写</p>
 <p><code>flex:1 0 150px;</code><br>这个简写能被拆分成三个属性：</p>
@@ -227,7 +227,7 @@ stretch:行伸展以填充container
     
     <summary type="html">
     
-      &lt;h4&gt;Flex&lt;/h4&gt;
+      &lt;h4&gt;Flex中关于flex-grow与flex-shrink的计算&lt;/h4&gt;
 
 &lt;p&gt;Flex容器中的项目&lt;code&gt;Flex&lt;/code&gt;属性简写&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;flex:1 0 150px;&lt;/code&gt;&lt;br&gt;这个简写能被拆分成三个属性：&lt;/p&gt;
