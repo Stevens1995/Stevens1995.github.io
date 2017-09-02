@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-02T05:35:07.293Z</updated>
+  <updated>2017-09-02T12:17:34.435Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -20,18 +20,16 @@
     <link href="https://stevens1995.github.io/2017/08/31/Grid%E8%AF%A6%E8%A7%A3/"/>
     <id>https://stevens1995.github.io/2017/08/31/Grid详解/</id>
     <published>2017-08-31T10:02:20.000Z</published>
-    <updated>2017-09-02T05:35:07.293Z</updated>
+    <updated>2017-09-02T12:17:34.435Z</updated>
     
     <content type="html"><![CDATA[<h1>Grid详解</h1>
-
-
-
 
 <h4>Grid container属性:</h4>
 
 <p><code>display</code>:定义一个grid容器</p>
 <p><code>grid | inline-grid | subgrid</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">grid:定义块级grid容器  </div><div class="line"></div><div class="line">inline-grid:定义行级grid容器  </div><div class="line"></div><div class="line">subgrid:容器本身是grid项目</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p><code>grid-template-columns</code> &amp; <code>grid-template-rows</code>：定义容器的行和列</p>
 <p><code>track-size | line-name</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">track-size:行的尺寸</div><div class="line"></div><div class="line">line-name:行之间的线的名字</div><div class="line"></div><div class="line">fr: fr单位允许将轨道的尺寸设计为容器可用空间的一部分。</div></pre></td></tr></table></figure>
@@ -60,21 +58,18 @@
 <p><code>grid-row</code></p>
 <p><code>grid-area</code>:为一个项目指定一个名字，还可以作为 gird-column(row)-start(end)的简写</p>
 <p><code>justify-self</code>:分配项目中行上剩余的空间</p>
-<p><code>align-self</code>:分配项目中列上剩余的空间</p>
+<p><code>align-self</code>:分配项目中列上剩余的空间 </p>
 ]]></content>
     
     <summary type="html">
     
       &lt;h1&gt;Grid详解&lt;/h1&gt;
 
-
-
-
 &lt;h4&gt;Grid container属性:&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;display&lt;/code&gt;:定义一个grid容器&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;grid | inline-grid | subgrid&lt;/code&gt;&lt;/p&gt;
-&lt;fig
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;grid:定义块级grid容器  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;inline-grid:定义行级grid容器  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;subgrid:容器本身是grid项目&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
