@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-04T03:47:40.490Z</updated>
+  <updated>2017-09-04T07:04:18.109Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TCP三次握手四次挥手</title>
+    <link href="https://stevens1995.github.io/2017/09/04/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
+    <id>https://stevens1995.github.io/2017/09/04/TCP三次握手四次挥手/</id>
+    <published>2017-09-04T06:32:25.000Z</published>
+    <updated>2017-09-04T07:04:18.109Z</updated>
+    
+    <content type="html"><![CDATA[<p>##TCP三次握手四次挥手</p>
+<p>####three handshake:</p>
+<p><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170904/handshake.png" alt="tcp_handshake"></p>
+<p>1.首先客户端的TCP首先向服务端发送一个特殊的TCP报文段，报文段首部的SYN标志位被置为1，另外，客户端会随机地选择一个初始序号(seq)，并将此编号放置于该报文段的序号字段中，随后报文被封装到一个IP数据报中并发送给服务器</p>
+<p>2.服务器提取出TCP报文段,为该TCP连接分配TCP缓存和变量，并想该客户端TCP发送允许连接的报文段。报文段的SYN标志位置为1，首部确认号字段被置为seq+1，最后服务端选择自己的初始序列号seq。</p>
+<p>3.客户端TCP收到服务端允许连接的报文段后，客户端也要为该连接分配缓存和变量。客户端再向服务器发送确认报文段，序号seq为之前的序号加一，确认字段ACK为seq_server加一，最后一部SYN置为0，连接建立。</p>
+<p>####four waved:</p>
+<p><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170904/waved.png" alt=""></p>
+<p>一个TCP连接中的双方都能终止连接，比如客户端要终止连接，客户端即发送TCP报文段，FIN标志位置为1，服务端收到后发送一个确认报文段，客户端联机即终止。服务端要终止的话也要进行相同的操作。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##TCP三次握手四次挥手&lt;/p&gt;
+&lt;p&gt;####three handshake:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170904/hands
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>事件委托</title>
