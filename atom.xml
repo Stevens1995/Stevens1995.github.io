@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-02T12:17:34.435Z</updated>
+  <updated>2017-09-04T03:46:21.581Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -16,11 +16,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>事件委托</title>
+    <link href="https://stevens1995.github.io/2017/09/04/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
+    <id>https://stevens1995.github.io/2017/09/04/事件委托/</id>
+    <published>2017-09-04T03:22:56.000Z</published>
+    <updated>2017-09-04T03:46:21.581Z</updated>
+    
+    <content type="html"><![CDATA[<h1>javascript delegation(事件委托)</h1>
+
+<p>事件委托能够避免在js中为很多具体的节点添加事件监听，只需为父元素添加即可。通过父元素的事件监听来分析事件冒泡从而获得匹配的子元素。</p>
+<a id="more"></a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"parent-list"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"post-1"</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"post-2"</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"post-3"</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"post-4"</span>&gt;</span>Item 4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"post-5"</span>&gt;</span>Item 5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"post-6"</span>&gt;</span>Item 6<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// Get the element, add a click listener...</span></div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"parent-list"</span>).addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">	<span class="comment">// e.target is the clicked element!</span></div><div class="line">	<span class="comment">// If it was a list item</span></div><div class="line">	<span class="keyword">if</span>(e.target &amp;&amp; e.target.nodeName == <span class="string">"LI"</span>) &#123;</div><div class="line">		<span class="comment">// List item found!  Output the ID!</span></div><div class="line">		<span class="built_in">console</span>.log(<span class="string">"List item "</span>, e.target.id.replace(<span class="string">"post-"</span>, <span class="string">""</span>), <span class="string">" was clicked!"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1&gt;javascript delegation(事件委托)&lt;/h1&gt;
+
+&lt;p&gt;事件委托能够避免在js中为很多具体的节点添加事件监听，只需为父元素添加即可。通过父元素的事件监听来分析事件冒泡从而获得匹配的子元素。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Grid详解</title>
     <link href="https://stevens1995.github.io/2017/08/31/Grid%E8%AF%A6%E8%A7%A3/"/>
     <id>https://stevens1995.github.io/2017/08/31/Grid详解/</id>
     <published>2017-08-31T10:02:20.000Z</published>
-    <updated>2017-09-02T12:17:34.435Z</updated>
+    <updated>2017-09-04T03:30:20.344Z</updated>
     
     <content type="html"><![CDATA[<h1>Grid详解</h1>
 
@@ -196,7 +223,7 @@
     <link href="https://stevens1995.github.io/2017/08/19/FunctionalPrograming/"/>
     <id>https://stevens1995.github.io/2017/08/19/FunctionalPrograming/</id>
     <published>2017-08-19T09:08:07.000Z</published>
-    <updated>2017-08-28T14:04:46.856Z</updated>
+    <updated>2017-09-04T03:32:26.121Z</updated>
     
     <content type="html"><![CDATA[<h4>Functional Programing(函数式编程)</h4>
 
@@ -220,7 +247,8 @@
 <p>在函数式编程中，副作用指的是任何在调用的函数之外可以检测到的应用程序状态的改变。</p>
 <h5>通过高阶函数的可重用性(reusability though high order function)：</h5>
 
-<h5></h5>]]></content>
+<h5></h5>
+]]></content>
     
     <summary type="html">
     
