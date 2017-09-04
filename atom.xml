@@ -60,9 +60,9 @@
     <link href="https://stevens1995.github.io/2017/09/04/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
     <id>https://stevens1995.github.io/2017/09/04/事件委托/</id>
     <published>2017-09-04T03:22:56.000Z</published>
-    <updated>2017-09-04T03:47:40.490Z</updated>
+    <updated>2017-09-04T07:09:31.032Z</updated>
     
-    <content type="html"><![CDATA[<h1>javascript delegation(事件委托)</h1>
+    <content type="html"><![CDATA[<h3>javascript delegation(事件委托)</h3>
 
 <p>事件委托能够避免在js中为很多具体的节点添加事件监听，只需为父元素添加即可。通过父元素的事件监听来分析事件冒泡从而获得匹配的子元素。</p>
 <a id="more"></a>
@@ -71,7 +71,7 @@
     
     <summary type="html">
     
-      &lt;h1&gt;javascript delegation(事件委托)&lt;/h1&gt;
+      &lt;h3&gt;javascript delegation(事件委托)&lt;/h3&gt;
 
 &lt;p&gt;事件委托能够避免在js中为很多具体的节点添加事件监听，只需为父元素添加即可。通过父元素的事件监听来分析事件冒泡从而获得匹配的子元素。&lt;/p&gt;
     
