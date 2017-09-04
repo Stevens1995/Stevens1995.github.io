@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> TCP三次握手四次挥手 · Hexo</title><meta name="description" content="TCP三次握手四次挥手 - Stevens"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://stevens1995.github.io/atom.xml" title="Hexo"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/Stevens1995/Stevens1995.github.io" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">TCP三次握手四次挥手</h1><div class="post-info">2017年9月4日</div><div class="post-content"><h1>TCP三次握手四次挥手</h1>
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> TCP三次握手四次挥手 · Hexo</title><meta name="description" content="TCP三次握手四次挥手 - Stevens"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://stevens1995.github.io/atom.xml" title="Hexo"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/Stevens1995/Stevens1995.github.io" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">TCP三次握手四次挥手</h1><div class="post-info">2017年9月4日</div><div class="post-content"><h4>TCP三次握手四次挥手</h4>
 
 
 <h4>three handshake:</h4>
@@ -10,6 +10,7 @@
 <p>2.服务器提取出TCP报文段,为该TCP连接分配TCP缓存和变量，并想该客户端TCP发送允许连接的报文段。报文段的SYN标志位置为1，首部确认号字段被置为seq+1，最后服务端选择自己的初始序列号seq。</p>
 <p>3.客户端TCP收到服务端允许连接的报文段后，客户端也要为该连接分配缓存和变量。客户端再向服务器发送确认报文段，序号seq为之前的序号加一，确认字段ACK为seq_server加一，最后一部SYN置为0，连接建立。</p>
 <h4>four waved:</h4>
+
 
 
 <p><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170904/waved.png" alt=""></p>

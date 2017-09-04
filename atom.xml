@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-04T07:07:43.549Z</updated>
+  <updated>2017-09-04T07:13:22.187Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://stevens1995.github.io/2017/09/04/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
     <id>https://stevens1995.github.io/2017/09/04/TCP三次握手四次挥手/</id>
     <published>2017-09-04T06:32:25.000Z</published>
-    <updated>2017-09-04T07:07:43.549Z</updated>
+    <updated>2017-09-04T07:13:22.187Z</updated>
     
-    <content type="html"><![CDATA[<h1>TCP三次握手四次挥手</h1>
+    <content type="html"><![CDATA[<h4>TCP三次握手四次挥手</h4>
 
 
 <h4>three handshake:</h4>
@@ -36,13 +36,14 @@
 <h4>four waved:</h4>
 
 
+
 <p><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170904/waved.png" alt=""></p>
 <p>一个TCP连接中的双方都能终止连接，比如客户端要终止连接，客户端即发送TCP报文段，FIN标志位置为1，服务端收到后发送一个确认报文段，客户端联机即终止。服务端要终止的话也要进行相同的操作。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1&gt;TCP三次握手四次挥手&lt;/h1&gt;
+      &lt;h4&gt;TCP三次握手四次挥手&lt;/h4&gt;
 
 
 &lt;h4&gt;three handshake:&lt;/h4&gt;
@@ -60,7 +61,7 @@
     <link href="https://stevens1995.github.io/2017/09/04/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
     <id>https://stevens1995.github.io/2017/09/04/事件委托/</id>
     <published>2017-09-04T03:22:56.000Z</published>
-    <updated>2017-09-04T07:10:36.714Z</updated>
+    <updated>2017-09-04T07:13:32.384Z</updated>
     
     <content type="html"><![CDATA[<h4>javascript delegation(事件委托)</h4>
 
@@ -87,9 +88,9 @@
     <link href="https://stevens1995.github.io/2017/08/31/Grid%E8%AF%A6%E8%A7%A3/"/>
     <id>https://stevens1995.github.io/2017/08/31/Grid详解/</id>
     <published>2017-08-31T10:02:20.000Z</published>
-    <updated>2017-09-04T03:30:20.344Z</updated>
+    <updated>2017-09-04T07:13:24.328Z</updated>
     
-    <content type="html"><![CDATA[<h1>Grid详解</h1>
+    <content type="html"><![CDATA[<h4>Grid详解</h4>
 
 <h4>Grid container属性:</h4>
 
@@ -130,7 +131,7 @@
     
     <summary type="html">
     
-      &lt;h1&gt;Grid详解&lt;/h1&gt;
+      &lt;h4&gt;Grid详解&lt;/h4&gt;
 
 &lt;h4&gt;Grid container属性:&lt;/h4&gt;
 
@@ -150,9 +151,9 @@
     <link href="https://stevens1995.github.io/2017/08/30/Flex%E8%AF%A6%E8%A7%A3/"/>
     <id>https://stevens1995.github.io/2017/08/30/Flex详解/</id>
     <published>2017-08-30T06:26:22.000Z</published>
-    <updated>2017-09-02T02:07:10.458Z</updated>
+    <updated>2017-09-04T07:13:28.884Z</updated>
     
-    <content type="html"><![CDATA[<h1>Flex详解</h1>
+    <content type="html"><![CDATA[<h4>Flex详解</h4>
 
 <h4>总览:</h4>
 
@@ -193,7 +194,7 @@
     
     <summary type="html">
     
-      &lt;h1&gt;Flex详解&lt;/h1&gt;
+      &lt;h4&gt;Flex详解&lt;/h4&gt;
 
 &lt;h4&gt;总览:&lt;/h4&gt;
 
@@ -263,7 +264,7 @@
     <link href="https://stevens1995.github.io/2017/08/19/FunctionalPrograming/"/>
     <id>https://stevens1995.github.io/2017/08/19/FunctionalPrograming/</id>
     <published>2017-08-19T09:08:07.000Z</published>
-    <updated>2017-09-04T03:32:26.121Z</updated>
+    <updated>2017-09-04T07:13:25.925Z</updated>
     
     <content type="html"><![CDATA[<h4>Functional Programing(函数式编程)</h4>
 
@@ -312,7 +313,7 @@
     <link href="https://stevens1995.github.io/2017/08/16/Flex/"/>
     <id>https://stevens1995.github.io/2017/08/16/Flex/</id>
     <published>2017-08-16T11:39:48.000Z</published>
-    <updated>2017-08-30T15:17:35.728Z</updated>
+    <updated>2017-09-04T07:13:27.500Z</updated>
     
     <content type="html"><![CDATA[<h4>Flex中关于flex-grow与flex-shrink的计算</h4>
 
@@ -488,7 +489,7 @@
     <link href="https://stevens1995.github.io/2017/05/30/undefined%E5%92%8Cnull/"/>
     <id>https://stevens1995.github.io/2017/05/30/undefined和null/</id>
     <published>2017-05-30T06:53:14.000Z</published>
-    <updated>2017-09-04T06:30:23.555Z</updated>
+    <updated>2017-09-04T07:13:17.265Z</updated>
     
     <content type="html"><![CDATA[<p>##undefined VS null</p>
 <p>undeined表示一个变量已经被声明,但是还没有赋值。</p>
@@ -611,7 +612,7 @@
     <link href="https://stevens1995.github.io/2017/05/07/clear%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
     <id>https://stevens1995.github.io/2017/05/07/clear工作原理/</id>
     <published>2017-05-07T08:27:19.000Z</published>
-    <updated>2017-08-28T14:05:24.603Z</updated>
+    <updated>2017-09-04T07:13:30.380Z</updated>
     
     <content type="html"><![CDATA[<p>对元素使用clear属性时，表示清除元素周围的浮动。</p>
 <p>clear清除浮动时，<strong>对添加clear属性的元素本身起作用</strong>。比如:</p>
