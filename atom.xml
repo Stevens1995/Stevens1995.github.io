@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-04T03:46:21.581Z</updated>
+  <updated>2017-09-04T03:47:40.490Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://stevens1995.github.io/2017/09/04/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
     <id>https://stevens1995.github.io/2017/09/04/事件委托/</id>
     <published>2017-09-04T03:22:56.000Z</published>
-    <updated>2017-09-04T03:46:21.581Z</updated>
+    <updated>2017-09-04T03:47:40.490Z</updated>
     
     <content type="html"><![CDATA[<h1>javascript delegation(事件委托)</h1>
 
@@ -448,19 +448,23 @@
     <link href="https://stevens1995.github.io/2017/05/30/undefined%E5%92%8Cnull/"/>
     <id>https://stevens1995.github.io/2017/05/30/undefined和null/</id>
     <published>2017-05-30T06:53:14.000Z</published>
-    <updated>2017-08-28T14:16:41.330Z</updated>
+    <updated>2017-09-04T06:30:23.555Z</updated>
     
-    <content type="html"><![CDATA[<p>网上看到很多关于undefined和null区别的解释，总结一下：</p>
-<p>版本1：<br>    undefined意味着变量已经被声明但是还没有被赋值，null可以作为一种值赋值给变量，代表没有值。<br>    undefined和null是两种不同的类型，undefined就是undefined，null是object类型<br>    对于没有赋值的变量，JavaScript会默认设置为undefined，JavaScript不会设置变量值为null，必须在程序中手动设置。</p>
-<p>版本2：<br>    undefined表示“缺少值”，表示此处该有一个值，但是还没有定义。<br>    null表示“没有对象”，即该出不应该有值。</p>
+    <content type="html"><![CDATA[<p>##undefined VS null</p>
+<p>undeined表示一个变量已经被声明,但是还没有赋值。</p>
+<p>null本身是一个值,可以被赋值给变量,代表‘空值’</p>
+<p>undefined本身是一种类型(undefined),null是Object类型(typeof的结果,应该是bug,null也是js的基本类型之一)</p>
+<p>js在创建变量时会给变量初始化为undefined,但是js从来不会将某个值初始化为null,必须手动设置为null</p>
 <a id="more"></a>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;网上看到很多关于undefined和null区别的解释，总结一下：&lt;/p&gt;
-&lt;p&gt;版本1：&lt;br&gt;    undefined意味着变量已经被声明但是还没有被赋值，null可以作为一种值赋值给变量，代表没有值。&lt;br&gt;    undefined和null是两种不同的类型，undefined就是undefined，null是object类型&lt;br&gt;    对于没有赋值的变量，JavaScript会默认设置为undefined，JavaScript不会设置变量值为null，必须在程序中手动设置。&lt;/p&gt;
-&lt;p&gt;版本2：&lt;br&gt;    undefined表示“缺少值”，表示此处该有一个值，但是还没有定义。&lt;br&gt;    null表示“没有对象”，即该出不应该有值。&lt;/p&gt;
+      &lt;p&gt;##undefined VS null&lt;/p&gt;
+&lt;p&gt;undeined表示一个变量已经被声明,但是还没有赋值。&lt;/p&gt;
+&lt;p&gt;null本身是一个值,可以被赋值给变量,代表‘空值’&lt;/p&gt;
+&lt;p&gt;undefined本身是一种类型(undefined),null是Object类型(typeof的结果,应该是bug,null也是js的基本类型之一)&lt;/p&gt;
+&lt;p&gt;js在创建变量时会给变量初始化为undefined,但是js从来不会将某个值初始化为null,必须手动设置为null&lt;/p&gt;
     
     </summary>
     
