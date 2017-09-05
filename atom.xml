@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-04T07:13:22.187Z</updated>
+  <updated>2017-09-05T01:40:04.126Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript事件模型</title>
+    <link href="https://stevens1995.github.io/2017/09/05/javascript%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/"/>
+    <id>https://stevens1995.github.io/2017/09/05/javascript事件模型/</id>
+    <published>2017-09-05T01:01:11.000Z</published>
+    <updated>2017-09-05T01:40:04.126Z</updated>
+    
+    <content type="html"><![CDATA[<h4>javascript事件模型</h4>
+
+
+<h4>事件流：</h4>
+
+<p>IE事件流：事件冒泡：事件最开始由具体的的元素接收，然后向上传播至不具体的节点。</p>
+<p>Netscape: 事件捕获：不具体的的节点先接收到事件，具体的节点后接收到事件。</p>
+<p>DOM事件流：事件捕获阶段、处于目标阶段、事件冒泡阶段。</p>
+<a id="more"></a>
+<h4>事件处理程序：</h4>
+
+<p>HTML事件处理程序：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">onclick</span>=<span class="string">"alert('clicked.')"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>this的值等于目标元素</p>
+<p>DOM0级事件处理程序：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'mybtn'</span>);</div><div class="line"></div><div class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.id);</div><div class="line">&#125;</div><div class="line"></div><div class="line">btn.onclick = <span class="literal">null</span>;<span class="comment">//删除事件处理程序</span></div></pre></td></tr></table></figure>
+<p>this指向目标元素</p>
+<p>DOM2级事件处理程序：</p>
+<p><code>addEventListener &amp; removeEventListener</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'mybtn'</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handle</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.id);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handle2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.id);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">btn.addEventListener(<span class="string">'click'</span>,handle,<span class="literal">false</span>);<span class="comment">//true表示在事件捕获阶段处理程序，fasle表示在事件冒泡阶段处理程序</span></div><div class="line"></div><div class="line">btn.addEventListener(<span class="string">'click'</span>,handle,<span class="literal">true</span>);<span class="comment">//可以在事件捕获阶段再定义处理程序，与冒泡阶段互不影响，移除的时候也要分别移除</span></div><div class="line"></div><div class="line"></div><div class="line">btn.addEventListener(<span class="string">'click'</span>,handle2,<span class="literal">false</span>);</div><div class="line"></div><div class="line"><span class="comment">//可以添加多个事件处理程序，按照定义的顺序执行</span></div><div class="line"></div><div class="line"></div><div class="line">btn.removeEventListener(<span class="string">'click'</span>,handle,<span class="literal">false</span>);</div></pre></td></tr></table></figure>
+<p>IE事件处理程序：</p>
+<p><code>attachEvent &amp; detachEvent</code></p>
+<p>通过attach添加的时间处理程序只会在冒泡阶段发生。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'mybtn'</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handle</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.id);</div><div class="line">&#125;</div><div class="line"></div><div class="line">btn.attachEvent(<span class="string">'onclick'</span>,handle);<span class="comment">//与DOM2不同的是这里添加的是时间处理程序的名称不是事件名称</span></div><div class="line"></div><div class="line">btn.detachEvent(<span class="string">'onclick'</span>,handle);</div></pre></td></tr></table></figure>
+<h4>跨浏览器处理程序：</h4>
+
+<p>检测对应的对象是否存在然后决定使用哪个，注意检测顺序：DOM2 -&gt; IE -&gt;HTML事件处理程序</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;javascript事件模型&lt;/h4&gt;
+
+
+&lt;h4&gt;事件流：&lt;/h4&gt;
+
+&lt;p&gt;IE事件流：事件冒泡：事件最开始由具体的的元素接收，然后向上传播至不具体的节点。&lt;/p&gt;
+&lt;p&gt;Netscape: 事件捕获：不具体的的节点先接收到事件，具体的节点后接收到事件。&lt;/p&gt;
+&lt;p&gt;DOM事件流：事件捕获阶段、处于目标阶段、事件冒泡阶段。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="javascript事件模型" scheme="https://stevens1995.github.io/tags/javascript%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>TCP三次握手四次挥手</title>
@@ -61,7 +115,7 @@
     <link href="https://stevens1995.github.io/2017/09/04/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
     <id>https://stevens1995.github.io/2017/09/04/事件委托/</id>
     <published>2017-09-04T03:22:56.000Z</published>
-    <updated>2017-09-04T07:13:32.384Z</updated>
+    <updated>2017-09-05T01:02:00.332Z</updated>
     
     <content type="html"><![CDATA[<h4>javascript delegation(事件委托)</h4>
 
