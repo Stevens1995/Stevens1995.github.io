@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-05T01:40:04.126Z</updated>
+  <updated>2017-09-06T02:35:34.728Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>XSS和CSRF初步了解</title>
+    <link href="https://stevens1995.github.io/2017/09/06/XSS%E5%92%8CCSRF%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3/"/>
+    <id>https://stevens1995.github.io/2017/09/06/XSS和CSRF初步了解/</id>
+    <published>2017-09-06T01:31:53.000Z</published>
+    <updated>2017-09-06T02:35:34.728Z</updated>
+    
+    <content type="html"><![CDATA[<h4>XSS &amp; CSRF</h4>
+
+<p>XSS:cross-site-scripting 跨站点脚本<br>CSRF:cross-site-request-forgery 跨站点请求伪造</p>
+<p>XSS：攻击者不直接锁定要攻击的目标，通过向某些存在漏洞的网站（比如将用户输入不经过验证直接输出到网站）注入脚本，等到用户访问网站时，脚本运行从而达到攻击的目的。</p>
+<p>存储型XSS:<br><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170906/sorted-XSS.png" alt="XSS"></p>
+<a id="more"></a>
+<p>XSS的类型：</p>
+<p>存储型（stored XSS）：又叫做持续型，注入的数据（被攻击者接收的数据）会存储在服务端，比如服务器。<br>反射型（reflected XSS）：用户的输入立即返回<br>基于DOM的XSS（DOM based XSS）：数据来源和数据接收的地方都是DOM，数据流不会离开客户端</p>
+<p>防止XSS攻击：验证来自于客户端的数据或进行相关的处理</p>
+<p>CSRF：攻击者通过已经通过验证，服务端完全信任的客户端（被攻击者）来发送http请求，从而达到攻击的目的</p>
+<p><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170906/csrf.png" alt="CSRF"></p>
+<p>e.g. 攻击者向被攻击者发送一个图片 <code>&lt;img src=&quot;/attack?transferfund=4000&quot; alt=&quot;&quot;&gt;</code> 诱导被攻击者点击后，发送给服务器，服务器以为是经过认证的被攻击者发送的正常的请求，所以请求相映成功。</p>
+<p>防止CSRF： 1.每次打开一个会话服务端向客户端发送一个唯一的不可预测的随机的数，每个正常的http请求都会隐蔽的带着这个随机数，从而让服务端能够判断是否是CSRF攻击请求<br>2.强制用户重新认证</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;XSS &amp;amp; CSRF&lt;/h4&gt;
+
+&lt;p&gt;XSS:cross-site-scripting 跨站点脚本&lt;br&gt;CSRF:cross-site-request-forgery 跨站点请求伪造&lt;/p&gt;
+&lt;p&gt;XSS：攻击者不直接锁定要攻击的目标，通过向某些存在漏洞的网站（比如将用户输入不经过验证直接输出到网站）注入脚本，等到用户访问网站时，脚本运行从而达到攻击的目的。&lt;/p&gt;
+&lt;p&gt;存储型XSS:&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170906/sorted-XSS.png&quot; alt=&quot;XSS&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="security" scheme="https://stevens1995.github.io/tags/security/"/>
+    
+  </entry>
   
   <entry>
     <title>javascript事件模型</title>
