@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-06T02:35:34.728Z</updated>
+  <updated>2017-09-07T08:53:53.680Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -14,6 +14,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue生命周期</title>
+    <link href="https://stevens1995.github.io/2017/09/07/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <id>https://stevens1995.github.io/2017/09/07/Vue生命周期/</id>
+    <published>2017-09-07T07:48:28.000Z</published>
+    <updated>2017-09-07T08:53:53.680Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Vue.js生命周期</h4>
+
+<p><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170907/component-lifecycle.png" alt="Lifecycle" width="600" height="1400"></p>
+<a id="more"></a>
+<h4>Creation</h4>
+
+<p>beforeCreate: 在Observe data和init Events之前，数据还不是响应式的，事件不存在。</p>
+<p>created：在Observe data和init Events之后</p>
+<h4>Mounting</h4>
+
+<p>beforeMount: 在 template 和 render Function 被编译之前</p>
+<p>mounted: 在这个钩子中，响应式数据、模板、render Function都可用</p>
+<h4>Updating</h4>
+
+<p>beforeUpdate: 数据已经被修改但是还没有被重新渲染</p>
+<p>updated: template 和 DOM中的数据已经被修改后</p>
+<h4>Destruction</h4>
+
+<p>beforeDestory: Vue实例被销毁之前</p>
+<p>destoryed: 实例已经被销毁，做一些最后的工作，比如向服务端发送消息。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Vue.js生命周期&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170907/component-lifecycle.png&quot; alt=&quot;Lifecycle&quot; width=&quot;600&quot; height=&quot;1400&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Vue.js" scheme="https://stevens1995.github.io/tags/Vue-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DOM相关</title>
+    <link href="https://stevens1995.github.io/2017/09/07/DOM%E7%9B%B8%E5%85%B3/"/>
+    <id>https://stevens1995.github.io/2017/09/07/DOM相关/</id>
+    <published>2017-09-07T04:52:50.000Z</published>
+    <updated>2017-09-07T04:58:19.917Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Document Object Model</h4>
+
+<p>DOM(document object model)是针对HTML和XML的一个API。DOM描述了一个层次化的节点树，允许开发人员添加、修改和删除节点。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Document Object Model&lt;/h4&gt;
+
+&lt;p&gt;DOM(document object model)是针对HTML和XML的一个API。DOM描述了一个层次化的节点树，允许开发人员添加、修改和删除节点。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>XSS和CSRF初步了解</title>
@@ -152,7 +220,7 @@
     <link href="https://stevens1995.github.io/2017/09/04/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
     <id>https://stevens1995.github.io/2017/09/04/事件委托/</id>
     <published>2017-09-04T03:22:56.000Z</published>
-    <updated>2017-09-05T01:02:00.332Z</updated>
+    <updated>2017-09-06T11:34:33.278Z</updated>
     
     <content type="html"><![CDATA[<h4>javascript delegation(事件委托)</h4>
 
