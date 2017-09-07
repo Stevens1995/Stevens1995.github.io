@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-07T08:53:53.680Z</updated>
+  <updated>2017-09-07T08:57:34.020Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -20,12 +20,10 @@
     <link href="https://stevens1995.github.io/2017/09/07/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
     <id>https://stevens1995.github.io/2017/09/07/Vue生命周期/</id>
     <published>2017-09-07T07:48:28.000Z</published>
-    <updated>2017-09-07T08:53:53.680Z</updated>
+    <updated>2017-09-07T08:57:34.020Z</updated>
     
     <content type="html"><![CDATA[<h4>Vue.js生命周期</h4>
 
-<p><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170907/component-lifecycle.png" alt="Lifecycle" width="600" height="1400"></p>
-<a id="more"></a>
 <h4>Creation</h4>
 
 <p>beforeCreate: 在Observe data和init Events之前，数据还不是响应式的，事件不存在。</p>
@@ -33,7 +31,8 @@
 <h4>Mounting</h4>
 
 <p>beforeMount: 在 template 和 render Function 被编译之前</p>
-<p>mounted: 在这个钩子中，响应式数据、模板、render Function都可用</p>
+<p>mounted: 模板和渲染函数已经被编译，可以访问。</p>
+<a id="more"></a>
 <h4>Updating</h4>
 
 <p>beforeUpdate: 数据已经被修改但是还没有被重新渲染</p>
@@ -42,13 +41,21 @@
 
 <p>beforeDestory: Vue实例被销毁之前</p>
 <p>destoryed: 实例已经被销毁，做一些最后的工作，比如向服务端发送消息。</p>
+<p><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170907/component-lifecycle.png" alt="Lifecycle" width="600" height="1300"></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;h4&gt;Vue.js生命周期&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170907/component-lifecycle.png&quot; alt=&quot;Lifecycle&quot; width=&quot;600&quot; height=&quot;1400&quot;&gt;&lt;/p&gt;
+&lt;h4&gt;Creation&lt;/h4&gt;
+
+&lt;p&gt;beforeCreate: 在Observe data和init Events之前，数据还不是响应式的，事件不存在。&lt;/p&gt;
+&lt;p&gt;created：在Observe data和init Events之后&lt;/p&gt;
+&lt;h4&gt;Mounting&lt;/h4&gt;
+
+&lt;p&gt;beforeMount: 在 template 和 render Function 被编译之前&lt;/p&gt;
+&lt;p&gt;mounted: 模板和渲染函数已经被编译，可以访问。&lt;/p&gt;
     
     </summary>
     
