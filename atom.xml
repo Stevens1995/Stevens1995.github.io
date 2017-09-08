@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-08T02:40:23.978Z</updated>
+  <updated>2017-09-08T02:42:19.366Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -20,11 +20,12 @@
     <link href="https://stevens1995.github.io/2017/09/08/ES6%E4%B8%AD%E7%9A%84Symbol%E7%B1%BB%E5%9E%8B/"/>
     <id>https://stevens1995.github.io/2017/09/08/ES6中的Symbol类型/</id>
     <published>2017-09-08T01:14:00.000Z</published>
-    <updated>2017-09-08T02:40:23.978Z</updated>
+    <updated>2017-09-08T02:42:19.366Z</updated>
     
     <content type="html"><![CDATA[<h4>Symbols and Symbol properties</h4>
 
 <p>Symbol 是继javaScript的 string、number、boolean、undefined、null之后的第六个基本类型，创建Symbol的初衷是为了建立对象的私有属性。</p>
+<a id="more"></a>
 <p>创建Symbol：</p>
 <p>Symbol没有字面量形式，通过Symbol来创建一个新的Symbol，可以在函数中添加描述信息。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">let</span> firstname = <span class="built_in">Symbol</span>(<span class="string">'firstname'</span>);</div><div class="line"><span class="keyword">let</span> person = &#123;&#125;;</div><div class="line"></div><div class="line">person[firstname] = <span class="string">"Stevens"</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person[firstname]);</div></pre></td></tr></table></figure>
@@ -56,7 +57,6 @@
       &lt;h4&gt;Symbols and Symbol properties&lt;/h4&gt;
 
 &lt;p&gt;Symbol 是继javaScript的 string、number、boolean、undefined、null之后的第六个基本类型，创建Symbol的初衷是为了建立对象的私有属性。&lt;/p&gt;
-
     
     </summary>
     
