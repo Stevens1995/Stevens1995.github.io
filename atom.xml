@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-07T08:57:34.020Z</updated>
+  <updated>2017-09-08T02:40:23.978Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6中的Symbol类型</title>
+    <link href="https://stevens1995.github.io/2017/09/08/ES6%E4%B8%AD%E7%9A%84Symbol%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://stevens1995.github.io/2017/09/08/ES6中的Symbol类型/</id>
+    <published>2017-09-08T01:14:00.000Z</published>
+    <updated>2017-09-08T02:40:23.978Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Symbols and Symbol properties</h4>
+
+<p>Symbol 是继javaScript的 string、number、boolean、undefined、null之后的第六个基本类型，创建Symbol的初衷是为了建立对象的私有属性。</p>
+<p>创建Symbol：</p>
+<p>Symbol没有字面量形式，通过Symbol来创建一个新的Symbol，可以在函数中添加描述信息。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">let</span> firstname = <span class="built_in">Symbol</span>(<span class="string">'firstname'</span>);</div><div class="line"><span class="keyword">let</span> person = &#123;&#125;;</div><div class="line"></div><div class="line">person[firstname] = <span class="string">"Stevens"</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person[firstname]);</div></pre></td></tr></table></figure>
+<p>共享Symbol:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> fir = <span class="built_in">Symbol</span>.for(<span class="string">'global'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> sec = <span class="built_in">Symbol</span>.for(<span class="string">'global'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(fir == sec);</div></pre></td></tr></table></figure>
+<p>可以用Symbol.keyFor取回全局Symbol的关键字</p>
+<p>关于Symbol的强制转换，Symbol不能转换为string或者number类型，所以下面的两行代码会报错：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> fir = <span class="built_in">Symbol</span>(<span class="string">'fir'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(fir+<span class="string">' '</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(fir/<span class="number">1</span>);</div></pre></td></tr></table></figure>
+<p>读取对象的Symbol属性：</p>
+<p>Object.keys和Object.getOwnPropertyNames()都不能获得Symbol属性，可通过Object.getOwnPropertySymbols()获取对象所有的Symbols属性</p>
+<p>ES6对象中有关Symbol的操作和方法：</p>
+<hr>
+<p>Symbol.hasInstance - A method used by instanceof to determine an object’s inheritance.</p>
+<p>Symbol.isConcatSpreadable - A Boolean value indicating that Array.prototype.concat() should flatten the collection’s elements if the collection is passed as a parameter to Array.prototype.concat().</p>
+<p>Symbol.iterator - A method that returns an iterator.</p>
+<p>Symbol.match - A method used by String.prototype.match() to compare strings.</p>
+<p>Symbol.replace - A method used by String.prototype.replace() to replace substrings.</p>
+<p>Symbol.search - A method used by String.prototype.search() to locate substrings.</p>
+<p>Symbol.species - The constructor for making derived objects. </p>
+<p>Symbol.split - A method used by String.prototype.split() to split up strings.</p>
+<p>Symbol.toPrimitive - A method that returns a primitive valuerepresentation of an object.</p>
+<p>Symbol.toStringTag - A string used by Object.prototype.toString() to create an object description.</p>
+<p>Symbol.unscopables - An object whose properties are the names of object properties that should not be included in a with statement.</p>
+<hr>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Symbols and Symbol properties&lt;/h4&gt;
+
+&lt;p&gt;Symbol 是继javaScript的 string、number、boolean、undefined、null之后的第六个基本类型，创建Symbol的初衷是为了建立对象的私有属性。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="ES6" scheme="https://stevens1995.github.io/tags/ES6/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue生命周期</title>
@@ -655,12 +705,12 @@
     <link href="https://stevens1995.github.io/2017/05/30/undefined%E5%92%8Cnull/"/>
     <id>https://stevens1995.github.io/2017/05/30/undefined和null/</id>
     <published>2017-05-30T06:53:14.000Z</published>
-    <updated>2017-09-04T07:13:17.265Z</updated>
+    <updated>2017-09-07T11:27:11.279Z</updated>
     
     <content type="html"><![CDATA[<p>##undefined VS null</p>
 <p>undeined表示一个变量已经被声明,但是还没有赋值。</p>
 <p>null本身是一个值,可以被赋值给变量,代表‘空值’</p>
-<p>undefined本身是一种类型(undefined),null是Object类型(typeof的结果,应该是bug,null也是js的基本类型之一)</p>
+<p>undefined本身是一种类型(undefined),null是Object类型(typeof的结果,是bug,null也是js的基本类型之一)</p>
 <p>js在创建变量时会给变量初始化为undefined,但是js从来不会将某个值初始化为null,必须手动设置为null</p>
 <a id="more"></a>
 ]]></content>
@@ -670,7 +720,7 @@
       &lt;p&gt;##undefined VS null&lt;/p&gt;
 &lt;p&gt;undeined表示一个变量已经被声明,但是还没有赋值。&lt;/p&gt;
 &lt;p&gt;null本身是一个值,可以被赋值给变量,代表‘空值’&lt;/p&gt;
-&lt;p&gt;undefined本身是一种类型(undefined),null是Object类型(typeof的结果,应该是bug,null也是js的基本类型之一)&lt;/p&gt;
+&lt;p&gt;undefined本身是一种类型(undefined),null是Object类型(typeof的结果,是bug,null也是js的基本类型之一)&lt;/p&gt;
 &lt;p&gt;js在创建变量时会给变量初始化为undefined,但是js从来不会将某个值初始化为null,必须手动设置为null&lt;/p&gt;
     
     </summary>
@@ -805,58 +855,6 @@
     
     
       <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript getter and setter</title>
-    <link href="https://stevens1995.github.io/2017/05/07/javaScript%20getter%20and%20setter/"/>
-    <id>https://stevens1995.github.io/2017/05/07/javaScript getter and setter/</id>
-    <published>2017-05-07T03:22:41.000Z</published>
-    <updated>2017-08-28T14:16:10.599Z</updated>
-    
-    <content type="html"><![CDATA[<p>javaScript getter and setter</p>
-<p>For the most part, in JavaScript, what you see is what you get. A value’s a value; there are no tricks. Sometimes however, you want a value that’s based on some other values: someone’s full name, for example, is a concatenation of their first and last names. If you have a person object, and you want the users of that object to be able to set the full, first or last name, and see that change immediately reflected in the other values, you’d conventionally build it with functions:</p>
-<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">person.setLastName(<span class="string">'Smith'</span>); </div><div class="line">person.setFirstName(<span class="string">'Jimmy'</span>); </div><div class="line">person.getFullName(); <span class="comment">// Jimmy Smith</span></div></pre></td></tr></table></figure>
-<p>But this is ugly, and requires the users of your object to care that the properties are related; in a more complex example, that might not be as obvious as with names. Luckily, there’s a better way, added in ECMAScript 5.</p>
-<p>Meet getters and setters.</p>
-<p>How</p>
-<p>Let’s make that person object. We want to be able to set the first name, last name or full name, and have it update the other two automagically.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    firstName: <span class="string">'Jimmy'</span>,</div><div class="line">    lastName: <span class="string">'Smith'</span>,</div><div class="line">    get fullName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName;</div><div class="line">    &#125;,</div><div class="line">    set fullName (name) &#123;</div><div class="line">        <span class="keyword">var</span> words = name.toString().split(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">this</span>.firstName = words[<span class="number">0</span>] || <span class="string">''</span>;</div><div class="line">        <span class="keyword">this</span>.lastName = words[<span class="number">1</span>] || <span class="string">''</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">person.fullName = <span class="string">'Jack Franklin'</span>;</div><div class="line"><span class="built_in">console</span>.log(person.firstName); <span class="comment">// Jack</span></div><div class="line"><span class="built_in">console</span>.log(person.lastName) <span class="comment">// Franklin</span></div></pre></td></tr></table></figure>
-<p>So what’s going on here?</p>
-<p>The get and set keywords are important. Following them is the property they relate to (fullName) and a function body that defines the behaviour when the property is accessed (name = person.fullName) or modified (person.fullName = ‘Some Name’).</p>
-<p>These two keywords define accessor functions: a getter and a setter for the fullName property. When the property is accessed, the return value from the getter is used. When a value is set, the setter is called and passed the value that was set. It’s up to you what you do with that value, but what is returned from the setter is the value that was passed in – so you don’t need to return anything.</p>
-<p>The official way: Object.defineProperty</p>
-<p>Along with the inline method of declaring getters and setters, it can also be done more explicitly via Object.defineProperty (MDN Documentation). This method takes three arguments. The first is the object to add the property to, the second is the name of the property, and the third is an object that describes the property (known as the property’s descriptor). Here’s an example that replicates the above example:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    firstName: <span class="string">'Jimmy'</span>,</div><div class="line">    lastName: <span class="string">'Smith'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">Object</span>.defineProperty(person, <span class="string">'fullName'</span>, &#123;</div><div class="line">    get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> firstName + <span class="string">' '</span> + lastName;</div><div class="line">    &#125;,</div><div class="line">    set: <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> words = name.split(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">this</span>.firstName = words[<span class="number">0</span>] || <span class="string">''</span>;</div><div class="line">        <span class="keyword">this</span>.lastName = words[<span class="number">1</span>] || <span class="string">''</span>;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>The advantage here isn’t immediately apparent. Other than being able to add properties after creating the initial object, is there a real benefit?</p>
-<p>When you define a property this way, you can do much more than just define a setter or getter. You may also pass following keys:</p>
-<p>configurable (false by default): if this is true, the property’s configuration will be modifiable in future.<br>enumerable (false by default): if true, the property will appear when looping over the object (for (var key in obj)).<br>We can also define properties that don’t have explicit getters or setters:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.defineProperty(person, <span class="string">'age'</span>, &#123;</div><div class="line">    value: <span class="number">42</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>This will create person.age, and set it to the value 42. It’s important to note that this property isn’t writable. Calling person.age = 99 will have no effect. In this way you can create read-only properties. If a property has a value key set, it cannot have a getter or setter. Properties can have values or accessors, not both.</p>
-<p>Not only that, but because the enumerable property defaults to false, this property will not appear when we loop over the object’s keys.</p>
-<p>If we wanted to make a property writable, we would need to set the writable property:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.defineProperty(person, <span class="string">'age'</span>, &#123;</div><div class="line">    value: <span class="number">42</span>,</div><div class="line">    writable: <span class="literal">true</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>Now, person.age = 99; will have the desired effect.</p>
-<p>Overuse</p>
-<p>Remember: just because a feature exists, it doesn’t need to be used all the time. Getters and Setters have their use cases, but don’t go over the top, or you’ll most likely end up with a design that’s confusing for those interacting with your objects. Used carefully, they’re very powerful. But with great power comes great responsibility.</p>
-<p>Browser support?</p>
-<p>IE9 and above have full support for Object.defineProperty, along with Safari 5+, Firefox 4+, Chrome 5+ and Opera 12+. If you’re working with Node.js, there’s full support. Don’t you just love Node?!</p>
-<p>This article was authored by <a href="https://twitter.com/phuunet" target="_blank" rel="external">Tom Ashworth</a>.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;javaScript getter and setter&lt;/p&gt;
-&lt;p&gt;For the most part, in JavaScript, what you see is what you get. A value’s a value; there are no tricks. Sometimes however, you want a value that’s based on some other values: someone’s full name, for example, is a concatenation of their first and last names. If you have a person object, and you want the users of that object to be able to set the full, first or last name, and see that change immediately reflected in the other values, you’d conventionally build it with functions:&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
     
   </entry>
   
