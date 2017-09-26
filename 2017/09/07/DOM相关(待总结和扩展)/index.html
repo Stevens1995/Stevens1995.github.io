@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> DOM相关(待总结和扩展) · Hexo</title><meta name="description" content="DOM相关(待总结和扩展) - Stevens"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://stevens1995.github.io/atom.xml" title="Hexo"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/Stevens1995/Stevens1995.github.io" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">DOM相关(待总结和扩展)</h1><div class="post-info">2017年9月7日</div><div class="post-content"><h4>Document Object Model</h4>
+
+<p>DOM(document object model)是针对HTML和XML的一个API。DOM描述了一个层次化的节点树，允许开发人员添加、修改和删除节点。</p>
+<p>Node类型：</p>
+<p>DOM1级定义的Node类型接口，DOM中所有的节点都有实现这个接口。  </p>
+<p>nodeType、nodeName、nodeValue</p>
+<p>childNodes对象、parentNode、previousSibling、nextSibling</p>
+<p>appendChild()、insertBefore()、replaceChild()、removeChild()</p>
+<p>cloneNode()、normalize()</p>
+<p>Document类型:</p>
+<p>Document类型表示文档。浏览器中，document是HTMLDocument(继承自Document类型)的一个实例。</p>
+<p>nodeType:9<br>nodeName:”#document”</p>
+<p>document.documentElement表示第一个节点(html) 等于document.childNodes[0];</p>
+<p>因为经常使用，document.body指向body节点</p>
+<p>doctype:一般使用document.doctype取得对文档类型声明的引用  </p>
+<p>不同浏览器有差异，有的将文档类型声明作为节点，可通过childNodes访问，有的不行，etc</p>
+<p>document是HTMLDocument类型的一个实例，有一些Document类型没有的属性:</p>
+<p>document.title、document.URL、document.domain、document.referrer</p>
+<p>DOM一致性检测：</p>
+<p>document.implementation()</p>
+<p>文档写入：</p>
+<p>document.write()、document.writeln、document.open()、document.close()</p>
+<p>Element类型：</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/09/07/Vue生命周期/" class="prev">上一篇</a><a href="/2017/09/06/XSS和CSRF初步了解/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2017 <a href="https://stevens1995.github.io">Stevens</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>

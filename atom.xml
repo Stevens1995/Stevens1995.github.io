@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-08T02:42:19.366Z</updated>
+  <updated>2017-09-26T03:04:40.477Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -16,11 +16,130 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HTML5新特性总结</title>
+    <link href="https://stevens1995.github.io/2017/09/26/HTML5%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    <id>https://stevens1995.github.io/2017/09/26/HTML5新特性总结/</id>
+    <published>2017-09-26T03:04:40.000Z</published>
+    <updated>2017-09-26T03:04:40.477Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSS3新特性总结</title>
+    <link href="https://stevens1995.github.io/2017/09/26/CSS3%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    <id>https://stevens1995.github.io/2017/09/26/CSS3新特性总结/</id>
+    <published>2017-09-26T03:04:00.000Z</published>
+    <updated>2017-09-26T03:04:00.636Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ES6中的Iterator和generators</title>
+    <link href="https://stevens1995.github.io/2017/09/25/ES6%E4%B8%AD%E7%9A%84Iterator%E5%92%8Cgenerators/"/>
+    <id>https://stevens1995.github.io/2017/09/25/ES6中的Iterator和generators/</id>
+    <published>2017-09-25T14:38:07.000Z</published>
+    <updated>2017-09-25T15:11:32.860Z</updated>
+    
+    <content type="html"><![CDATA[<h4>什么是iterator</h4>
+
+<p>iterator，迭代器，就是对象，具有一些用来迭代的接口。</p>
+<p></p><h4>什么是generator</h4><br>generator是一个函数，返回一个iterator<p></p>
+<p>在函数的function关键字之后，函数名之前加一个<code>*</code>号来表明函数是一个生成器。用<code>yield</code>关键字来声明返回值。迭代器和普通的for循环之间的区别是每次调用<code>next()</code>函数之后，不会继续执行，除非再次调用<code>next()</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;什么是iterator&lt;/h4&gt;
+
+&lt;p&gt;iterator，迭代器，就是对象，具有一些用来迭代的接口。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h4&gt;什么是generator&lt;/h4&gt;&lt;br&gt;generator是一个函数，返回一个iterator&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;在函数的functi
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ES6中的class</title>
+    <link href="https://stevens1995.github.io/2017/09/25/ES6%E4%B8%AD%E7%9A%84class/"/>
+    <id>https://stevens1995.github.io/2017/09/25/ES6中的class/</id>
+    <published>2017-09-25T02:22:28.000Z</published>
+    <updated>2017-09-25T14:44:31.935Z</updated>
+    
+    <content type="html"><![CDATA[<h4>ES5中的类结构实现:</h4>
+
+<p>ES5中类似于类的实现是先创造一个构造函数，然后在其原型上定义方法，例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">PersonType</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.name = name;</div><div class="line">&#125;</div><div class="line"></div><div class="line">PersonType.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> PersonType(<span class="string">'Nicholas'</span>);</div><div class="line">person.sayName();   <span class="comment">// Nicholas</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> PersonType); <span class="comment">//true </span></div><div class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> <span class="built_in">Object</span>);  <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<p>上面这种模式是很多库实现类的基础，也是ES6中类的基础。  </p>
+<h4>类声明</h4>
+
+<p>class关键字 + 类名  花括号中的语法像是ES6中对象字面量中方法的简写，不过方法间没有逗号。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PersonClass</span></span>&#123;</div><div class="line">	<span class="comment">//定义类的构造函数</span></div><div class="line">	<span class="keyword">constructor</span>(name)&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	sayName()&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> PersonClass(<span class="string">'Nicholas'</span>);</div><div class="line">person.sayName();  <span class="comment">//Nicholas</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> PersonClass); <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> <span class="built_in">Object</span>); <span class="comment">//true</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> PersonClass); <span class="comment">//function</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> PersonClass.prototype.sayName); <span class="comment">//function</span></div></pre></td></tr></table></figure>
+<p>自有属性：对象的自有属性应该全部定义在构造函数中  </p>
+<p>值得注意的是，class关键字声明只是基于现有的语法的语法糖，上面声明的PersonClass类实际上创造了一个函数，这个函数表现的和constructor构造函数一样。 所以<code>typeof PeronClass</code>是<code>function</code>，<code>sayName</code>函数和<code>constructor</code>的关系类似于上面<code>PersonType</code>和<code>sayName</code>的关系，这种类似性让我们在混合使用传统类型和ES6中的class时不需要有太多的顾虑。</p>
+<p>虽然class和传统语法有类似，但也有一些很重要的区别:</p>
+<ul><br>    <li>class定义不同于函数声明，不存在变量提升</li><br>    <li>class定义中自动使用严格模式</li><br>    <li>所有的方法都是不可枚举的</li><br>    <li>尝试使用<code>new</code>调用除构造函数之外的方法会报错</li><br>    <li>调用构造函数必须使用<code>new</code>关键字</li><br>    <li>尝试在类方法中修改类名会报错</li><br></ul>
+
+<p>记住这些后，上面的类声明完全可以用下面的代码代替：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> PersonClass = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="meta">	'use strict'</span></div><div class="line">	<span class="keyword">const</span> PersonClass = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">		<span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="keyword">new</span>.target === <span class="string">'undefined'</span>)&#123;</div><div class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"Constructor must be called with new."</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">Object</span>.defineProperty(PersonType2.prototype,<span class="string">"sayName"</span>,&#123;</div><div class="line">		value:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			<span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="keyword">new</span>.target !== <span class="string">'undefined'</span>)&#123;</div><div class="line">				<span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'Method cannot be call with new.'</span>);</div><div class="line">			&#125; </div><div class="line">			<span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">		&#125;</div><div class="line">		enumerable:<span class="literal">false</span>,</div><div class="line">		writable:<span class="literal">true</span>,</div><div class="line">		configurable:<span class="literal">true</span></div><div class="line">	&#125;);</div><div class="line">	<span class="keyword">return</span> PersonClass;</div><div class="line">&#125;())</div></pre></td></tr></table></figure></p>
+<p>通过let和const来保证不能从内部但是可以从外部改变类名，let同时也避免了class的变量提升，通过<code>new.target</code>来验证函数的调用是否应该使用<code>new</code>，通过<code>Object.defineProperty</code>来设置方法不可枚举。</p>
+<h4>类表达式</h4>
+
+<p>类有两种定义方式：类声明和类表达式，类似于函数声明和函数表达式，类声明的主要目的是为了将类作为一等公民传递到函数中。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;ES5中的类结构实现:&lt;/h4&gt;
+
+&lt;p&gt;ES5中类似于类的实现是先创造一个构造函数，然后在其原型上定义方法，例如：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;d
+    
+    </summary>
+    
+    
+      <category term="ES6" scheme="https://stevens1995.github.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS揭秘</title>
+    <link href="https://stevens1995.github.io/2017/09/14/CSS%E6%8F%AD%E7%A7%98/"/>
+    <id>https://stevens1995.github.io/2017/09/14/CSS揭秘/</id>
+    <published>2017-09-14T10:23:22.000Z</published>
+    <updated>2017-09-15T01:03:22.588Z</updated>
+    
+    <content type="html"><![CDATA[<h4>1.半透明边框</h4>
+
+<p>关键点：为元素设置背景颜色后，颜色会延伸至border的下面，所以当border为透明时看到的就是背景颜色<br>解决方法：border-clip:padding-box;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;1.半透明边框&lt;/h4&gt;
+
+&lt;p&gt;关键点：为元素设置背景颜色后，颜色会延伸至border的下面，所以当border为透明时看到的就是背景颜色&lt;br&gt;解决方法：border-clip:padding-box;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ES6中的Symbol类型</title>
     <link href="https://stevens1995.github.io/2017/09/08/ES6%E4%B8%AD%E7%9A%84Symbol%E7%B1%BB%E5%9E%8B/"/>
     <id>https://stevens1995.github.io/2017/09/08/ES6中的Symbol类型/</id>
     <published>2017-09-08T01:14:00.000Z</published>
-    <updated>2017-09-08T02:42:19.366Z</updated>
+    <updated>2017-09-19T02:12:36.938Z</updated>
     
     <content type="html"><![CDATA[<h4>Symbols and Symbol properties</h4>
 
@@ -115,15 +234,35 @@
   </entry>
   
   <entry>
-    <title>DOM相关</title>
-    <link href="https://stevens1995.github.io/2017/09/07/DOM%E7%9B%B8%E5%85%B3/"/>
-    <id>https://stevens1995.github.io/2017/09/07/DOM相关/</id>
+    <title>DOM相关(待总结和扩展)</title>
+    <link href="https://stevens1995.github.io/2017/09/07/DOM%E7%9B%B8%E5%85%B3(%E5%BE%85%E6%80%BB%E7%BB%93%E5%92%8C%E6%89%A9%E5%B1%95)/"/>
+    <id>https://stevens1995.github.io/2017/09/07/DOM相关(待总结和扩展)/</id>
     <published>2017-09-07T04:52:50.000Z</published>
-    <updated>2017-09-07T04:58:19.917Z</updated>
+    <updated>2017-09-08T08:45:43.807Z</updated>
     
     <content type="html"><![CDATA[<h4>Document Object Model</h4>
 
 <p>DOM(document object model)是针对HTML和XML的一个API。DOM描述了一个层次化的节点树，允许开发人员添加、修改和删除节点。</p>
+<p>Node类型：</p>
+<p>DOM1级定义的Node类型接口，DOM中所有的节点都有实现这个接口。  </p>
+<p>nodeType、nodeName、nodeValue</p>
+<p>childNodes对象、parentNode、previousSibling、nextSibling</p>
+<p>appendChild()、insertBefore()、replaceChild()、removeChild()</p>
+<p>cloneNode()、normalize()</p>
+<p>Document类型:</p>
+<p>Document类型表示文档。浏览器中，document是HTMLDocument(继承自Document类型)的一个实例。</p>
+<p>nodeType:9<br>nodeName:”#document”</p>
+<p>document.documentElement表示第一个节点(html) 等于document.childNodes[0];</p>
+<p>因为经常使用，document.body指向body节点</p>
+<p>doctype:一般使用document.doctype取得对文档类型声明的引用  </p>
+<p>不同浏览器有差异，有的将文档类型声明作为节点，可通过childNodes访问，有的不行，etc</p>
+<p>document是HTMLDocument类型的一个实例，有一些Document类型没有的属性:</p>
+<p>document.title、document.URL、document.domain、document.referrer</p>
+<p>DOM一致性检测：</p>
+<p>document.implementation()</p>
+<p>文档写入：</p>
+<p>document.write()、document.writeln、document.open()、document.close()</p>
+<p>Element类型：</p>
 ]]></content>
     
     <summary type="html">
@@ -131,7 +270,8 @@
       &lt;h4&gt;Document Object Model&lt;/h4&gt;
 
 &lt;p&gt;DOM(document object model)是针对HTML和XML的一个API。DOM描述了一个层次化的节点树，允许开发人员添加、修改和删除节点。&lt;/p&gt;
-
+&lt;p&gt;Node类型：&lt;/p&gt;
+&lt;p&gt;DOM1级
     
     </summary>
     
@@ -236,7 +376,7 @@
     <link href="https://stevens1995.github.io/2017/09/04/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
     <id>https://stevens1995.github.io/2017/09/04/TCP三次握手四次挥手/</id>
     <published>2017-09-04T06:32:25.000Z</published>
-    <updated>2017-09-04T07:13:22.187Z</updated>
+    <updated>2017-09-08T04:35:24.827Z</updated>
     
     <content type="html"><![CDATA[<h4>TCP三次握手四次挥手</h4>
 
@@ -304,56 +444,25 @@
     <link href="https://stevens1995.github.io/2017/08/31/Grid%E8%AF%A6%E8%A7%A3/"/>
     <id>https://stevens1995.github.io/2017/08/31/Grid详解/</id>
     <published>2017-08-31T10:02:20.000Z</published>
-    <updated>2017-09-04T07:13:24.328Z</updated>
+    <updated>2017-09-19T02:20:51.556Z</updated>
     
     <content type="html"><![CDATA[<h4>Grid详解</h4>
 
-<h4>Grid container属性:</h4>
+<h4>容器属性:</h4>
 
-<p><code>display</code>:定义一个grid容器</p>
-<p><code>grid | inline-grid | subgrid</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">grid:定义块级grid容器  </div><div class="line"></div><div class="line">inline-grid:定义行级grid容器  </div><div class="line"></div><div class="line">subgrid:容器本身是grid项目</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><code>grid-template-columns</code> &amp; <code>grid-template-rows</code>：定义容器的行和列</p>
-<p><code>track-size | line-name</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">track-size:行的尺寸</div><div class="line"></div><div class="line">line-name:行之间的线的名字</div><div class="line"></div><div class="line">fr: fr单位允许将轨道的尺寸设计为容器可用空间的一部分。</div></pre></td></tr></table></figure>
-<p><code>grid-template-area</code>:定义网格模板，通过项目的grid-area属性</p>
-<p><code>&lt;grid-area-name&gt; | . | name</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">grid-arem-name:项目中指明的名字</div><div class="line"></div><div class="line">. :一个点代表一个空的grid网格单元</div><div class="line"></div><div class="line">none:无</div></pre></td></tr></table></figure>
-<p><code>grid-template</code>：grid-template-rows、grid-template-columns、grid-template-area的简写</p>
-<p><code>none | subgrid | &lt;grid-template-rows&gt;/&lt;grid-template-columns&gt;</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">none:设置三个值为他们的默认值</div><div class="line"></div><div class="line">subgrid:</div><div class="line"></div><div class="line">grid-template-rows &amp; grid-template-columns:</div></pre></td></tr></table></figure>
-<p><code>grid-column-gap</code> &amp; <code>grid-row-gap</code>:设置行和列之间间隙的大小</p>
-<p><code>grid-gap</code>:grid-column-gap 和 grid-row-gap的简写</p>
-<p><code>justify-items</code>:排列行上的项目</p>
-<p><code>align-items</code>:排列列上的项目</p>
-<p><code>justify-content</code>:分配行上的空间</p>
-<p><code>align-content</code>:分配列上的空间</p>
-<p><code>grid-auto-columns</code> &amp; <code>grid-auto-rows</code>:设定自动生成的行和列的大小</p>
-<p><code>grid-auto-flow</code>:定义项目如何在容器内自动排列</p>
-<p><code>grid</code>:以上所有属性的简写</p>
-<h4>Grid items属性:</h4>
-
-<p><code>grid-column-start</code></p>
-<p><code>grid-column-end</code></p>
-<p><code>grid-row-start</code></p>
-<p><code>grid-row-end</code></p>
-<p><code>grid-column</code></p>
-<p><code>grid-row</code></p>
-<p><code>grid-area</code>:为一个项目指定一个名字，还可以作为 gird-column(row)-start(end)的简写</p>
-<p><code>justify-self</code>:分配项目中行上剩余的空间</p>
-<p><code>align-self</code>:分配项目中列上剩余的空间 </p>
-]]></content>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#container</span>&#123;</div><div class="line">	<span class="attribute">display</span>: grid | inline-grid | subgrid; <span class="comment">/* 定义一个grid容器*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#container</span>&#123;</div><div class="line">	<span class="attribute">grid-template-columns</span>:;   <span class="comment">/*定义容器的列*/</span></div><div class="line">	<span class="attribute">grid-template-rows</span>:;  <span class="comment">/*定义容器的行*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#container</span>&#123;</div><div class="line">	<span class="attribute">grid-template-areas</span>: ; </div><div class="line">	<span class="comment">/*划分容器的区域,分别为每个单元分配单元属于哪个部分,指定之后便可以在子项目中用grid-area来占用这个区域*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#container</span>&#123;</div><div class="line">	<span class="attribute">grid-column-gap</span>:; </div><div class="line">	<span class="attribute">grid-row-gap</span>:;</div><div class="line">	<span class="comment">/*定义track间线的宽度*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#container</span>&#123;</div><div class="line">	<span class="attribute">justify-content</span>: ; <span class="comment">/*定义容器的剩余空间如何排列*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       &lt;h4&gt;Grid详解&lt;/h4&gt;
 
-&lt;h4&gt;Grid container属性:&lt;/h4&gt;
+&lt;h4&gt;容器属性:&lt;/h4&gt;
 
-&lt;p&gt;&lt;code&gt;display&lt;/code&gt;:定义一个grid容器&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;grid | inline-grid | subgrid&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;grid:定义块级grid容器  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;inline-grid:定义行级grid容器  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;subgrid:容器本身是grid项目&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;
     
     </summary>
     
@@ -367,7 +476,7 @@
     <link href="https://stevens1995.github.io/2017/08/30/Flex%E8%AF%A6%E8%A7%A3/"/>
     <id>https://stevens1995.github.io/2017/08/30/Flex详解/</id>
     <published>2017-08-30T06:26:22.000Z</published>
-    <updated>2017-09-04T07:13:28.884Z</updated>
+    <updated>2017-09-19T02:05:22.226Z</updated>
     
     <content type="html"><![CDATA[<h4>Flex详解</h4>
 
@@ -379,7 +488,7 @@
 
 <p><code>display:flex:</code>定义一个Flex容器</p>
 <p><code>flex-direction:</code> 建立主轴，定义项目在主轴上的排列方向 </p>
-<p>row | row-reverse | column | column-reverse<br>row(默认):主轴水平方向，项目从左到右排列<br>row-reverse:主轴水平，项目从右到左<br>column:主轴垂直，项目从上到下<br>column:主轴垂直，项目从下到上</p>
+<p>row | row-reverse | column | column-reverse<br>row(默认):主轴水平方向，项目从左到右排列<br>row-reverse:主轴水平，项目从右到左<br>column:主轴垂直，项目从上到下<br>column-reverse:主轴垂直，项目从下到上</p>
 <p><code>flex-wrap:</code>默认的所有项目在主轴上排列，不换行，可通过flex-wrap来改变  </p>
 <p><code>nowrap | wrap | wrap-reverse</code></p>
 <p>nowrap(默认):所有项目排列在主轴上不换行<br>wrap:换行，项目从顶部到底部<br>wrap-reverse:不换行，项目从底部到顶部</p>
@@ -697,164 +806,6 @@
     
     
       <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>undefined和null</title>
-    <link href="https://stevens1995.github.io/2017/05/30/undefined%E5%92%8Cnull/"/>
-    <id>https://stevens1995.github.io/2017/05/30/undefined和null/</id>
-    <published>2017-05-30T06:53:14.000Z</published>
-    <updated>2017-09-07T11:27:11.279Z</updated>
-    
-    <content type="html"><![CDATA[<p>##undefined VS null</p>
-<p>undeined表示一个变量已经被声明,但是还没有赋值。</p>
-<p>null本身是一个值,可以被赋值给变量,代表‘空值’</p>
-<p>undefined本身是一种类型(undefined),null是Object类型(typeof的结果,是bug,null也是js的基本类型之一)</p>
-<p>js在创建变量时会给变量初始化为undefined,但是js从来不会将某个值初始化为null,必须手动设置为null</p>
-<a id="more"></a>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;##undefined VS null&lt;/p&gt;
-&lt;p&gt;undeined表示一个变量已经被声明,但是还没有赋值。&lt;/p&gt;
-&lt;p&gt;null本身是一个值,可以被赋值给变量,代表‘空值’&lt;/p&gt;
-&lt;p&gt;undefined本身是一种类型(undefined),null是Object类型(typeof的结果,是bug,null也是js的基本类型之一)&lt;/p&gt;
-&lt;p&gt;js在创建变量时会给变量初始化为undefined,但是js从来不会将某个值初始化为null,必须手动设置为null&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>top和left属性值问题</title>
-    <link href="https://stevens1995.github.io/2017/05/22/top%E5%92%8Cleft%E5%B1%9E%E6%80%A7%E5%80%BC%E9%97%AE%E9%A2%98/"/>
-    <id>https://stevens1995.github.io/2017/05/22/top和left属性值问题/</id>
-    <published>2017-05-22T07:33:10.000Z</published>
-    <updated>2017-08-28T14:16:33.619Z</updated>
-    
-    <content type="html"><![CDATA[<p>position为absoulate的元素，元素相对于盒子模型中的padding盒来进行定位。<br>为top、bottom、left、right等设置的值为百分比，进行计算时，top和bottom的值由padding盒的高度乘以百分比得到，left和right的值由padding盒的宽度乘以百分比得到。</p>
-<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;position为absoulate的元素，元素相对于盒子模型中的padding盒来进行定位。&lt;br&gt;为top、bottom、left、right等设置的值为百分比，进行计算时，top和bottom的值由padding盒的高度乘以百分比得到，left和right的值由padding盒的宽度乘以百分比得到。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="css" scheme="https://stevens1995.github.io/categories/css/"/>
-    
-    
-      <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>javascript中的this</title>
-    <link href="https://stevens1995.github.io/2017/05/16/javascript%E4%B8%AD%E7%9A%84this/"/>
-    <id>https://stevens1995.github.io/2017/05/16/javascript中的this/</id>
-    <published>2017-05-16T11:40:54.000Z</published>
-    <updated>2017-08-28T14:16:01.401Z</updated>
-    
-    <content type="html"><![CDATA[<p>javascript中的<code>this</code>问题</p>
-<p>javascript中的<code>this</code>对象取决于你如何调用函数：</p>
-<p>通常来说有四种调用函数的方法：</p>
-<p>1.<code>someThing.someFunction(arg1, arg2, argN)</code></p>
-<p>2.<code>someFunction.call(someThing, arg1, arg2, argN)</code></p>
-<p>3.<code>someFunction.apply(someThing, [arg1, arg2, argN])</code></p>
-<p>上面三种调用方式，this对象都是<code>someThing</code></p>
-<p>4.<code>new someFunction(arg1,arg2,argN)</code><br>使用<code>new</code>关键字，会创建一个Object对象，<code>this</code>是这个新建的对象</p>
-<a id="more"></a>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;javascript中的&lt;code&gt;this&lt;/code&gt;问题&lt;/p&gt;
-&lt;p&gt;javascript中的&lt;code&gt;this&lt;/code&gt;对象取决于你如何调用函数：&lt;/p&gt;
-&lt;p&gt;通常来说有四种调用函数的方法：&lt;/p&gt;
-&lt;p&gt;1.&lt;code&gt;someThing.someFunction(arg1, arg2, argN)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;2.&lt;code&gt;someFunction.call(someThing, arg1, arg2, argN)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;3.&lt;code&gt;someFunction.apply(someThing, [arg1, arg2, argN])&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;上面三种调用方式，this对象都是&lt;code&gt;someThing&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;4.&lt;code&gt;new someFunction(arg1,arg2,argN)&lt;/code&gt;&lt;br&gt;使用&lt;code&gt;new&lt;/code&gt;关键字，会创建一个Object对象，&lt;code&gt;this&lt;/code&gt;是这个新建的对象&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS传递参数问题</title>
-    <link href="https://stevens1995.github.io/2017/05/12/JS%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/"/>
-    <id>https://stevens1995.github.io/2017/05/12/JS传递参数问题/</id>
-    <published>2017-05-12T02:49:20.000Z</published>
-    <updated>2017-08-28T14:16:18.479Z</updated>
-    
-    <content type="html"><![CDATA[<p>关于js中函数传递参数时到底是传递值还是传递引用</p>
-<p>参考下面代码:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeStuff</span>(<span class="params">a, b, c</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">  a = a * <span class="number">10</span>;</div><div class="line">  b.item = <span class="string">"changed"</span>;</div><div class="line">  c = &#123;<span class="attr">item</span>: <span class="string">"changed"</span>&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2 = &#123;<span class="attr">item</span>: <span class="string">"unchanged"</span>&#125;;</div><div class="line"></div><div class="line">changeStuff(num, obj1, obj2);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(num);</div><div class="line"><span class="built_in">console</span>.log(obj1.item);    </div><div class="line"><span class="built_in">console</span>.log(obj2.item);</div></pre></td></tr></table></figure></p>
-<p>输出结果是:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">10</span></div><div class="line">changed</div><div class="line">unchanged</div></pre></td></tr></table></figure></p>
-<p>如果js中全部都是按值传递，那么obj1.item应该不被改变。如果js中全部是按引用传递，那么obj2.item和num应该被改变。<br>实际上，<strong>js中所有的参数都是按值传递</strong>，只不过<strong>有些参数的值本身就是一个引用</strong>，如果改变参数本身的话（比如num和obj1)，不会对外部产生影响，如果改变参数内部属性的话，改变就会应用到函数外部，应用到引用所指向的内存中。</p>
-<a id="more"></a>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;关于js中函数传递参数时到底是传递值还是传递引用&lt;/p&gt;
-&lt;p&gt;参考下面代码:&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;changeStuff&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;a, b, c&lt;/span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  a = a * &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  b.item = &lt;span class=&quot;string&quot;&gt;&quot;changed&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  c = &amp;#123;&lt;span class=&quot;attr&quot;&gt;item&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;changed&quot;&lt;/span&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; num = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; obj1 = &amp;#123;&lt;span class=&quot;attr&quot;&gt;item&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;unchanged&quot;&lt;/span&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; obj2 = &amp;#123;&lt;span class=&quot;attr&quot;&gt;item&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;unchanged&quot;&lt;/span&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;changeStuff(num, obj1, obj2);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(num);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(obj1.item);    &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(obj2.item);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;输出结果是:&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;changed&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;unchanged&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;如果js中全部都是按值传递，那么obj1.item应该不被改变。如果js中全部是按引用传递，那么obj2.item和num应该被改变。&lt;br&gt;实际上，&lt;strong&gt;js中所有的参数都是按值传递&lt;/strong&gt;，只不过&lt;strong&gt;有些参数的值本身就是一个引用&lt;/strong&gt;，如果改变参数本身的话（比如num和obj1)，不会对外部产生影响，如果改变参数内部属性的话，改变就会应用到函数外部，应用到引用所指向的内存中。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>clear工作原理</title>
-    <link href="https://stevens1995.github.io/2017/05/07/clear%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
-    <id>https://stevens1995.github.io/2017/05/07/clear工作原理/</id>
-    <published>2017-05-07T08:27:19.000Z</published>
-    <updated>2017-09-04T07:13:30.380Z</updated>
-    
-    <content type="html"><![CDATA[<p>对元素使用clear属性时，表示清除元素周围的浮动。</p>
-<p>clear清除浮动时，<strong>对添加clear属性的元素本身起作用</strong>。比如:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">	div&#123;</span></div><div class="line"><span class="undefined">		width: 100px;</span></div><div class="line"><span class="undefined">		height: 100px;</span></div><div class="line"><span class="undefined">		background: red;</span></div><div class="line"><span class="undefined">		float: left;</span></div><div class="line"><span class="undefined">	&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>对1号元素添加clear属性并不起作用，1和2两个块还是在同一行，向左浮动，因为1号元素前面没有其他元素。</p>
-<p>只有对2号元素使用clear时<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>2号元素换行。</p>
-<p><strong>只对前面的代码起作用</strong>：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">	div&#123;</span></div><div class="line"><span class="undefined">		width: 100px;</span></div><div class="line"><span class="undefined">		height: 100px;</span></div><div class="line"><span class="undefined">		background: red;</span></div><div class="line"><span class="undefined">		float: left;</span></div><div class="line"><span class="undefined">	&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both;"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>三个元素均设置为向左浮动，为中间的元素添加 <strong>clear:both</strong>，<strong>div3</strong>还是和 <strong>div2</strong>在一行，因为clear只对前面的代码起作用所以2号元素换行后还是和3号元素在一起。</p>
-<p>技巧:所有使用<strong>clear:left</strong>或者<strong>clear:right</strong>的地方都可以使用<strong>clear</strong>代替。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;对元素使用clear属性时，表示清除元素周围的浮动。&lt;/p&gt;
-&lt;p&gt;clear清除浮动时，&lt;strong&gt;对添加clear属性的元素本身起作用&lt;/strong&gt;。比如:&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;	div&amp;#123;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;		width: 100px;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;		height: 100px;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;		background: red;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;		float: left;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;style&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;clear:both;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="css" scheme="https://stevens1995.github.io/categories/css/"/>
-    
-    
-      <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
     
   </entry>
   
