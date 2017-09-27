@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-27T09:45:19.572Z</updated>
+  <updated>2017-09-27T10:05:03.820Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -20,15 +20,12 @@
     <link href="https://stevens1995.github.io/2017/09/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E5%8F%8A%E8%A7%84%E9%81%BF%E6%96%B9%E6%B3%95/"/>
     <id>https://stevens1995.github.io/2017/09/27/浏览器同源策略及规避方法/</id>
     <published>2017-09-27T06:58:08.000Z</published>
-    <updated>2017-09-27T09:45:19.572Z</updated>
+    <updated>2017-09-27T10:05:03.820Z</updated>
     
     <content type="html"><![CDATA[<p></p><h4>浏览器同源策略以及规避方法</h4><br>同源策略：最初的含义是A网页设置的cookie，B网页不能打开，除非这两个网页同源，同源值得的三个相同<p></p>
-<ul><br>    <li>协议相同</li><br>    <li>域名相同</li><br>    <li>端口相同</li><br></ul>
-
-<p>非同源间的限制：</p>
-<ul><br>    <li>cookie、session、IndexDB无法访问</li><br>    <li>DOM无法获得</li><br>    <li>AJAX请求不能发送</li><br></ul>
-
-<p></p><h4>规避方法:</h4><br><em>cookie</em><br><em>iframe</em><br><em>AJAX</em><br>同源策略中，AJAX只能发送给同源的网址，否则就会报错。<br>解决的方法有四种：  <p></p>
+<p><ul><br>    <li>协议相同</li><br>    <li>域名相同</li><br>    <li>端口相同</li><br></ul><br>非同源间的限制：</p>
+<p><ul><br>    <li>cookie、session、IndexDB无法访问</li><br>    <li>DOM无法获得</li><br>    <li>AJAX请求不能发送</li><br></ul><br><a id="more"></a></p>
+<p></p><h4>规避方法:</h4><br><strong>cookie</strong><br><strong>iframe</strong><br><strong>AJAX</strong><br>同源策略中，AJAX只能发送给同源的网址，否则就会报错。<br>解决的方法有四种：  <p></p>
 <ol><br>    <li>架设代理服务器（浏览器请求同源服务器，再由后者请求外部服务。）</li><br>    <li>JSONP</li><br>    <li>WebScoket</li><br>    <li>CORS</li><br></ol>
 
 <p><em>JSONP</em><br><code>script</code>元素发出的请求不受同源策略的限制，<code>JSONP</code>正是利用了这点：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addScriptTag</span>(<span class="params">src</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">  script.setAttribute(<span class="string">"type"</span>,<span class="string">"text/javascript"</span>);</div><div class="line">  script.src = src;</div><div class="line">  <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  addScriptTag(<span class="string">'http://example.com/ip?callback=foo'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'Your public IP address is: '</span> + data.ip);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
@@ -57,7 +54,8 @@
     <summary type="html">
     
       &lt;p&gt;&lt;/p&gt;&lt;h4&gt;浏览器同源策略以及规避方法&lt;/h4&gt;&lt;br&gt;同源策略：最初的含义是A网页设置的cookie，B网页不能打开，除非这两个网页同源，同源值得的三个相同&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;br&gt;    &lt;li&gt;协议相同&lt;/li&gt;&lt;br&gt;    &lt;li&gt;域名相同&lt;/li&gt;&lt;b
+&lt;p&gt;&lt;ul&gt;&lt;br&gt;    &lt;li&gt;协议相同&lt;/li&gt;&lt;br&gt;    &lt;li&gt;域名相同&lt;/li&gt;&lt;br&gt;    &lt;li&gt;端口相同&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;非同源间的限制：&lt;/p&gt;
+&lt;p&gt;&lt;ul&gt;&lt;br&gt;    &lt;li&gt;cookie、session、IndexDB无法访问&lt;/li&gt;&lt;br&gt;    &lt;li&gt;DOM无法获得&lt;/li&gt;&lt;br&gt;    &lt;li&gt;AJAX请求不能发送&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;
     
     </summary>
     
