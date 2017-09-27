@@ -2,7 +2,7 @@
 
 <p>转载自<code>阮一峰</code>的<a href="http://www.ruanyifeng.com/blog/2015/09/web-page-performance-in-depth.html" target="_blank" rel="external">网页性能管理详解</a></p>
 <p></p><h4>1.网页的生成过程</h4><br>要理解网站性能为何不好，首先需要了解网页是怎么生成的。<br>网页的生成过程大致可以分为以下五个步骤:<br><a id="more"></a><p></p>
-<p><ol><br>    <li>html代码转化成DOM</li><br>    <li>CSS代码转化成CSSOM</li><br>    <li>结合DOM和CSSOM生成一棵渲染树</li><br>    <li>生成布局（layout）</li><br>    <li>将布局绘制在屏幕上</li><br></ol><br>其中，第一步到第三步都非常快，最后两步耗时较多。<br>生成布局(flow)和绘制(paint)这两步合成为’渲染’(render)</p>
+<p><ol><br>    <li>html代码转化成DOM</li><br>    <li>CSS代码转化成CSSOM</li><br>    <li>结合DOM和CSSOM生成一棵渲染树</li><br>    <li>生成布局（layout）</li><br>    <li>将布局绘制在屏幕上</li><br></ol><br><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170927/pageGeneration.png" alt="页面生成步骤"><br>其中，第一步到第三步都非常快，最后两步耗时较多。<br>生成布局(flow)和绘制(paint)这两步合成为’渲染’(render)</p>
 <p></p><h4>2.重绘（repaint）和重排（reflow）</h4><br>网站生成的时候会至少渲染一次，用户访问的过程中还会不断的重新渲染。<br>以下3中情况会导致页面重新渲染：<p></p>
 <ul><br>    <li>修改DOM</li><br>    <li>修改样式表</li><br>    <li>用户事件（比如鼠标悬停、页面滚动、输入框键入文字、改变窗口大小等等）</li><br></ul>
 
