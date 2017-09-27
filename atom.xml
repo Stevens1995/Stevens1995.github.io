@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-26T12:17:21.867Z</updated>
+  <updated>2017-09-27T03:34:56.576Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -16,11 +16,77 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>网站性能优化相关</title>
+    <link href="https://stevens1995.github.io/2017/09/27/%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%B8%E5%85%B3/"/>
+    <id>https://stevens1995.github.io/2017/09/27/网站性能优化相关/</id>
+    <published>2017-09-27T02:33:18.000Z</published>
+    <updated>2017-09-27T03:34:56.576Z</updated>
+    
+    <content type="html"><![CDATA[<h4>网页性能相关</h4>
+
+<p>转载自<code>阮一峰</code>的<a href="http://www.ruanyifeng.com/blog/2015/09/web-page-performance-in-depth.html" target="_blank" rel="external">网页性能管理详解</a></p>
+<p></p><h4>1.网页的生成过程</h4><br>要理解网站性能为何不好，首先需要了解网页是怎么生成的。<br>网页的生成过程大致可以分为以下五个步骤:<br><a id="more"></a><p></p>
+<p><ol><br>    <li>html代码转化成DOM</li><br>    <li>CSS代码转化成CSSOM</li><br>    <li>结合DOM和CSSOM生成一棵渲染树</li><br>    <li>生成布局（layout）</li><br>    <li>将布局绘制在屏幕上</li><br></ol><br>其中，第一步到第三步都非常快，最后两步耗时较多。<br>生成布局(flow)和绘制(paint)这两步合成为’渲染’(render)</p>
+<p></p><h4>2.重绘（repaint）和重排（reflow）</h4><br>网站生成的时候会至少渲染一次，用户访问的过程中还会不断的重新渲染。<br>以下3中情况会导致页面重新渲染：<p></p>
+<ul><br>    <li>修改DOM</li><br>    <li>修改样式表</li><br>    <li>用户事件（比如鼠标悬停、页面滚动、输入框键入文字、改变窗口大小等等）</li><br></ul>
+
+<p>因为<code>reflow</code>在<code>repaint</code>前面发生，所以<code>reflow</code>一定会导致<code>repaint</code>，但是<code>repaint</code>不一定会导致<code>reflow</code></p>
+<p></p><h4>3.对于性能的影响</h4><br>重绘和重排会不断地触发，这是不可避免的，要提高网页的性能就需要尽量降低重新渲染的频率。<p></p>
+<p></p><h4>提高性能的几个技巧</h4><p></p>
+<ul><br>    <li>写操作应该放在一起，不要几个读操作中间加一个写操作。</li><br>    <li>缓存，如果某个样式是通过重排得到的，最好缓存一下。</li><br>    <li>不要一条一条地改变样式，通过增加和删除class来一组一组地改变样式</li><br>    <li>同上，可以通过fragement来一组一组地改变DOM，避免频繁地改变真实的DOM</li><br>    <li>display属性为none的元素不会触发渲染，所以对某个元素进行多次操作前可以先设为display:none;然后再更改。</li><br>    <li>visibility:hidden;的元素只对重绘有影响，不会影响重排</li><br>    <li>虚拟DOM，比如Vue.js、React.js</li><br>    <li>window.requestAnimationFrame()、window.requestIdleCallback() </li><br></ul>
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;网页性能相关&lt;/h4&gt;
+
+&lt;p&gt;转载自&lt;code&gt;阮一峰&lt;/code&gt;的&lt;a href=&quot;http://www.ruanyifeng.com/blog/2015/09/web-page-performance-in-depth.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网页性能管理详解&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h4&gt;1.网页的生成过程&lt;/h4&gt;&lt;br&gt;要理解网站性能为何不好，首先需要了解网页是怎么生成的。&lt;br&gt;网页的生成过程大致可以分为以下五个步骤:&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://stevens1995.github.io/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6中关于Object的扩展</title>
+    <link href="https://stevens1995.github.io/2017/09/27/ES6%E4%B8%AD%E5%85%B3%E4%BA%8EObject%E7%9A%84%E6%89%A9%E5%B1%95/"/>
+    <id>https://stevens1995.github.io/2017/09/27/ES6中关于Object的扩展/</id>
+    <published>2017-09-27T02:11:00.000Z</published>
+    <updated>2017-09-27T02:13:26.721Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="ES6" scheme="https://stevens1995.github.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网站性能中的重绘和重排</title>
+    <link href="https://stevens1995.github.io/2017/09/26/%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E4%B8%AD%E7%9A%84%E9%87%8D%E7%BB%98%E5%92%8C%E9%87%8D%E6%8E%92/"/>
+    <id>https://stevens1995.github.io/2017/09/26/网站性能中的重绘和重排/</id>
+    <published>2017-09-26T15:09:56.000Z</published>
+    <updated>2017-09-26T15:09:56.693Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ES6中的Function扩展</title>
     <link href="https://stevens1995.github.io/2017/09/26/ES6%E4%B8%AD%E7%9A%84Function%E6%89%A9%E5%B1%95/"/>
     <id>https://stevens1995.github.io/2017/09/26/ES6中的Function扩展/</id>
     <published>2017-09-26T07:48:07.000Z</published>
-    <updated>2017-09-26T12:17:21.867Z</updated>
+    <updated>2017-09-27T02:13:07.051Z</updated>
     
     <content type="html"><![CDATA[<h4>ES6中有关函数的扩展</h4>
 
@@ -50,7 +116,7 @@
 <p>ES6中允许使用默认的函数值和<code>...</code>操作符</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> add = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"first"</span>, <span class="string">"second = first"</span>,</div><div class="line">        <span class="string">"return first + second"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(add(<span class="number">1</span>, <span class="number">1</span>));     <span class="comment">// 2</span></div><div class="line"><span class="built_in">console</span>.log(add(<span class="number">1</span>));        <span class="comment">// 2</span></div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> pickFirst = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"...args"</span>, <span class="string">"return args[0]"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(pickFirst(<span class="number">1</span>, <span class="number">2</span>));   <span class="comment">// 1</span></div></pre></td></tr></table></figure>
-<h4>4.The Spread Operator(扩展操作符)</h4><br>与<code>rest paraments</code>相关，<code>rest paraments</code>将多余的参数合并为一个数组，<code>...</code>扩展操作符将一个数组分隔成多个参数传入函数<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> values = [<span class="number">25</span>, <span class="number">50</span>, <span class="number">75</span>, <span class="number">100</span>]</div><div class="line"></div><div class="line"><span class="comment">// equivalent to</span></div><div class="line"><span class="comment">// console.log(Math.max(25, 50, 75, 100));</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max(...values));     <span class="comment">// 100</span></div></pre></td></tr></table></figure><br><br><h4>5.ES6中的name属性</h4><br>ES6中，所有的函数都有一个<code>name</code>属性:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> doAnotherThing = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(doSomething.name);          <span class="comment">// "doSomething"</span></div><div class="line"><span class="built_in">console</span>.log(doAnotherThing.name);       <span class="comment">// "doAnotherThing"</span></div></pre></td></tr></table></figure><br><br><em>有关name属性的特殊案例</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> doSomething = <span class="function"><span class="keyword">function</span> <span class="title">doSomethingElse</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    get firstName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"Nicholas"</span></div><div class="line">    &#125;,</div><div class="line">    sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(doSomething.name);      <span class="comment">// "doSomethingElse"</span></div><div class="line"><span class="built_in">console</span>.log(person.sayName.name);   <span class="comment">// "sayName"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> descriptor = <span class="built_in">Object</span>.getOwnPropertyDescriptor(person, <span class="string">"firstName"</span>);</div><div class="line"><span class="built_in">console</span>.log(descriptor.get.name); <span class="comment">// "get firstName"</span></div></pre></td></tr></table></figure><br><br><code>get</code>和<code>set</code>函数的前面都会带上get或者set（要去的访问器属性，必须使用Object.getOwnPropertyDescriptor()函数）<br><br>一些其他的特殊案例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> doSomething = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(doSomething.bind().name);   <span class="comment">// "bound doSomething"</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> <span class="built_in">Function</span>()).name);     <span class="comment">// "anonymous"</span></div></pre></td></tr></table></figure><br><br>使用<code>bind()</code>绑定的函数name属性前有一个<code>bound</code><br>使用<code>Function()</code>构造的函数name属性为<code>anonymous</code><br><br><h4>函数的双重用法</h4>
+<h4>4.The Spread Operator(扩展操作符)</h4><br>与<code>rest paraments</code>相关，<code>rest paraments</code>将多余的参数合并为一个数组，<code>...</code>扩展操作符将一个数组分隔成多个参数传入函数<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> values = [<span class="number">25</span>, <span class="number">50</span>, <span class="number">75</span>, <span class="number">100</span>]</div><div class="line"></div><div class="line"><span class="comment">// equivalent to</span></div><div class="line"><span class="comment">// console.log(Math.max(25, 50, 75, 100));</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max(...values));     <span class="comment">// 100</span></div></pre></td></tr></table></figure><br><br><h4>5.ES6中的name属性</h4><br>ES6中，所有的函数都有一个<code>name</code>属性:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> doAnotherThing = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(doSomething.name);          <span class="comment">// "doSomething"</span></div><div class="line"><span class="built_in">console</span>.log(doAnotherThing.name);       <span class="comment">// "doAnotherThing"</span></div></pre></td></tr></table></figure><br><br><em>有关name属性的特殊案例</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> doSomething = <span class="function"><span class="keyword">function</span> <span class="title">doSomethingElse</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    get firstName() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"Nicholas"</span></div><div class="line">    &#125;,</div><div class="line">    sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(doSomething.name);      <span class="comment">// "doSomethingElse"</span></div><div class="line"><span class="built_in">console</span>.log(person.sayName.name);   <span class="comment">// "sayName"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> descriptor = <span class="built_in">Object</span>.getOwnPropertyDescriptor(person, <span class="string">"firstName"</span>);</div><div class="line"><span class="built_in">console</span>.log(descriptor.get.name); <span class="comment">// "get firstName"</span></div></pre></td></tr></table></figure><br><br><code>get</code>和<code>set</code>函数的前面都会带上get或者set（要去的访问器属性，必须使用Object.getOwnPropertyDescriptor()函数）<br><br>一些其他的特殊案例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> doSomething = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(doSomething.bind().name);   <span class="comment">// "bound doSomething"</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> <span class="built_in">Function</span>()).name);     <span class="comment">// "anonymous"</span></div></pre></td></tr></table></figure><br><br>使用<code>bind()</code>绑定的函数name属性前有一个<code>bound</code><br>使用<code>Function()</code>构造的函数name属性为<code>anonymous</code><br><br><h4>6.函数的双重用法</h4>
 
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person(<span class="string">"Nicholas"</span>);</div><div class="line"><span class="keyword">var</span> notAPerson = Person(<span class="string">"Nicholas"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person);        <span class="comment">// "[Object object]"</span></div><div class="line"><span class="built_in">console</span>.log(notAPerson);    <span class="comment">// "undefined"</span></div></pre></td></tr></table></figure>
 <p>javascript函数有两个内部方法，<code>[[call]]</code>和<code>[[constructor]]</code>，当函数不用<code>new</code>关键字调用时，[[call]]方法运行，执行函数体中的方法。当函数使用<code>new</code>关键字时，[[constructor]]方法调用，创造一个新对象，成为<code>new target</code>，然后将函数的<code>this</code>指向新对象，运行函数体。</p>
@@ -61,8 +127,22 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="keyword">new</span>.target !== <span class="string">"undefined"</span>) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;   <span class="comment">// using new</span></div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"You must use new with Person."</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person(<span class="string">"Nicholas"</span>);</div><div class="line"><span class="keyword">var</span> notAPerson = Person.call(person, <span class="string">"Michael"</span>);    <span class="comment">// error!</span></div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">new</span>.target === Person) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;   <span class="comment">// using new</span></div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"You must use new with Person."</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">AnotherPerson</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    Person.call(<span class="keyword">this</span>, name);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person(<span class="string">"Nicholas"</span>);</div><div class="line"><span class="keyword">var</span> anotherPerson = <span class="keyword">new</span> AnotherPerson(<span class="string">"Nicholas"</span>);  <span class="comment">// error!</span></div></pre></td></tr></table></figure>
 <p>当[[constructor]]方法执行时，new.target被送进执行的函数中，指向新创建的作为函数的<code>this</code>的对象。</p>
-<p></p><h4>块级函数</h4><br>在ES5中，下面的代码将会报错：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">"use strict"</span>;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line"></div><div class="line">    <span class="comment">// Throws a syntax error in ES5, not so in ES6</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
+<p></p><h4>7.块级函数</h4><br>在ES5中，下面的代码将会报错：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">"use strict"</span>;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line"></div><div class="line">    <span class="comment">// Throws a syntax error in ES5, not so in ES6</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p>
 <p>但是在ES6中，<code>doSomething()</code>函数被考虑为块级作用域函数，能在作用域内访问：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">"use strict"</span>;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">typeof</span> doSomething);        <span class="comment">// "function"</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    doSomething();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> doSomething);            <span class="comment">// "undefined"</span></div></pre></td></tr></table></figure></p>
+<p></p><h4>8.箭头函数</h4><br>箭头函数与普通javascript函数的重要区别：<p></p>
+<ul><br>    <li>没有<code>this</code>、<code>arguments</code>、<code>new.target</code>绑定</li><br>    <li>不能用<code>new</code>来调用(因为内部没有[[constructor]]方法)</li><br>    <li>没有<code>prototype</code></li><br>    <li>不能改变<code>this</code></li><br>    <li>没有<code>arguments</code>对象</li><br>    <li>No duplicate named parameters</li><br></ul>
+
+<p><em>注意：箭头函数同样也有<code>name</code>属性</em></p>
+<p><em>箭头函数的语法</em><br>箭头函数最简单的写法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> reflect = <span class="function"><span class="params">value</span> =&gt;</span> value;</div><div class="line"></div><div class="line"><span class="comment">// effectively equivalent to:</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> reflect = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> value;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>当函数不止一个参数时，需要将参数用<code>()</code>包括起来。<br>当函数体内没有操作，或者你想添加更多的操作时，又或者函数需要返回一个对象时，需要将函数体用<code>{}</code>包括起来。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> sum = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// effectively equivalent to:</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">---------------------------------------------------------------------------</div><div class="line"></div><div class="line"><span class="keyword">var</span> doNothing = <span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;;</div><div class="line"></div><div class="line"><span class="comment">// effectively equivalent to:</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> doNothing = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line"></div><div class="line">---------------------------------------------------------------------------</div><div class="line"></div><div class="line"><span class="keyword">var</span> getTempItem = <span class="function"><span class="params">id</span> =&gt;</span> (&#123; <span class="attr">id</span>: id, <span class="attr">name</span>: <span class="string">"Temp"</span> &#125;);</div><div class="line"></div><div class="line"><span class="comment">// effectively equivalent to:</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> getTempItem = <span class="function"><span class="keyword">function</span>(<span class="params">id</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        id: id,</div><div class="line">        name: <span class="string">"Temp"</span></div><div class="line">    &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><em>立即执行函数表达式(IIFE)</em></p>
+<p>ES5中的做法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> person = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        getName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> name;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125;(<span class="string">"Nicholas"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person.getName());      <span class="comment">// "Nicholas"</span></div></pre></td></tr></table></figure></p>
+<p>箭头函数的版本：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> person = <span class="function">(<span class="params">(name</span>) =&gt;</span> &#123;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        getName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> name;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125;)(<span class="string">"Nicholas"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(person.getName());      <span class="comment">// "Nicholas"</span></div></pre></td></tr></table></figure></p>
+<p><em>无<code>this</code>绑定</em><br>ES5中，函数的<code>this</code>值会发生改变，这容易造成很多错误。ES6的箭头函数移除了这一点，箭头函数没有<code>this</code>绑定值，这意味着在箭头函数中调用<code>this</code>的值时会在作用域链中查找。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> PageHandler = &#123;</div><div class="line"></div><div class="line">    id: <span class="string">"123456"</span>,</div><div class="line"></div><div class="line">    init: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">document</span>.addEventListener(<span class="string">"click"</span>,</div><div class="line">                event =&gt; <span class="keyword">this</span>.doSomething(event.type), <span class="literal">false</span>);</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    doSomething: <span class="function"><span class="keyword">function</span>(<span class="params">type</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"Handling "</span> + type  + <span class="string">" for "</span> + <span class="keyword">this</span>.id);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>这个例子中，<code>this</code>的值和<code>init()</code>函数中的<code>this</code>值相同</p>
+<p><em>无<code>arguments</code>绑定</em></p>
+<p><em>识别箭头函数</em><br>箭头函数也是函数，可以用判断一般函数的方法来判断箭头函数:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> comparator = <span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> comparator);                 <span class="comment">// "function"</span></div><div class="line"><span class="built_in">console</span>.log(comparator <span class="keyword">instanceof</span> <span class="built_in">Function</span>);    <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p></p><h4>尾部调用优化(Tail Call Optimization)</h4><br>在一个函数的最后一个语句调用函数，这种调用称作<code>Tail Call</code>。ES6中在严格模式下如果有尾部调用，则会进行优化，尾部调用不会创造新的执行上下文压入执行栈中，而是会重用旧函数的上下文。<p></p>
 ]]></content>
     
     <summary type="html">
@@ -643,113 +723,6 @@
     
     
       <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sass</title>
-    <link href="https://stevens1995.github.io/2017/08/21/sass/"/>
-    <id>https://stevens1995.github.io/2017/08/21/sass/</id>
-    <published>2017-08-21T15:16:47.000Z</published>
-    <updated>2017-08-22T12:16:20.214Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="css" scheme="https://stevens1995.github.io/categories/css/"/>
-    
-    
-      <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FunctionalPrograming</title>
-    <link href="https://stevens1995.github.io/2017/08/19/FunctionalPrograming/"/>
-    <id>https://stevens1995.github.io/2017/08/19/FunctionalPrograming/</id>
-    <published>2017-08-19T09:08:07.000Z</published>
-    <updated>2017-09-04T07:13:25.925Z</updated>
-    
-    <content type="html"><![CDATA[<h4>Functional Programing(函数式编程)</h4>
-
-
-<p>函数式编程(Functional Programing、FP)通过构建纯函数来编程，避免了状态共享(shared state)、可变的数据(mutable data)、副作用(side-effects)。函数式编程是声明式(declarative)而不是命令式(imperative)的编程。</p>
-<p>函数式编程是一种编程方法、模式，类同于面向对象编程、过程式编程。</p>
-<a id="more"></a>
-<h5>掌握函数式编程需要理解的几个概念：</h5>
-
-<p>纯函数(pure function)、函数组合(function composition)、避免共享状态(avoid shared state)、避免突变状态(avoid mutation state)、避免副作用(avoid side-effects)</p>
-<h6>纯函数是拥有以下特性的函数：</h6>  
-
-<p>1.相同的输入对应相同的输出<br>2.没有副作用</p>
-<p>并且，纯函数有许多对函数式编程来说很重要的特性，比如引用透明性(referential transparency，指可以用函数的返回值替代函数而不对代码的含义产生影响)</p>
-<h6>函数组合：</h6><br>将多个函数组合起来以产生一个新的函数或者执行某些计算，e.g.f(g(x))<br><br><h6>共享状态(shared state)：</h6><br>共享状态可以包含以下情形：共享作用域中的变量、对象或者内存空间，在多个作用域中传递的对象的属性<br><br>共享状态的弊端：<br>1.改变函数的执行顺序和时间会产生一些不同的结果<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> x = &#123;</div><div class="line">	val:<span class="number">2</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> x1 = <span class="function"><span class="params">()</span>=&gt;</span>x.val+=<span class="number">1</span>;</div><div class="line"><span class="keyword">const</span> x2 = <span class="function"><span class="params">()</span>=&gt;</span>x.val*=<span class="number">2</span>;</div><div class="line"></div><div class="line">x1();</div><div class="line">x2(); </div><div class="line"><span class="built_in">console</span>.log(x.val); <span class="comment">//6</span></div><div class="line"></div><div class="line"><span class="comment">//another order</span></div><div class="line">x2();</div><div class="line">x1();</div><div class="line"><span class="built_in">console</span>.log(x.val)<span class="comment">//5</span></div></pre></td></tr></table></figure><br><br>避免了共享状态后，函数的顺序不会影响执行结果：<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> y = &#123;</div><div class="line">	val:<span class="number">2</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> y1 = <span class="function"><span class="params">y</span>=&gt;</span><span class="built_in">Object</span>.assign(&#123;&#125;,y,&#123; <span class="attr">val</span>:x.val+<span class="number">1</span>&#125;);</div><div class="line"><span class="keyword">const</span> y2 = <span class="function"><span class="params">y</span>=&gt;</span><span class="built_in">Object</span>.assign(&#123;&#125;,y,&#123; <span class="attr">val</span>:x.val*<span class="number">2</span>&#125;);</div><div class="line"></div><div class="line"><span class="comment">//在此你可以执行任意的代码，而不会影响到后面的输出，因为函数不依赖于后面执行函数的依赖的状态</span></div><div class="line">y1();</div><div class="line">y2();</div><div class="line"></div><div class="line"><span class="comment">//或者</span></div><div class="line">y2();</div><div class="line">y1();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(y1(y2(y).val));</div></pre></td></tr></table></figure><br><br><h6>永恒性(immutability):</h6>
-
-<p>不能通过const来定义不可变的对象，const只是指定变量的引用的对象不能改变，可以改变对象的属性。</p>
-<p>Object.freeze()方法也不能完全是对象不可变，比如对象中又有对象，除非使用Object.freeze()方法来封住每一层的对象。</p>
-<h6>副作用：</h6>
-
-<p>在函数式编程中，副作用指的是任何在调用的函数之外可以检测到的应用程序状态的改变。</p>
-<h5>通过高阶函数的可重用性(reusability though high order function)：</h5>
-
-<h5></h5>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4&gt;Functional Programing(函数式编程)&lt;/h4&gt;
-
-
-&lt;p&gt;函数式编程(Functional Programing、FP)通过构建纯函数来编程，避免了状态共享(shared state)、可变的数据(mutable data)、副作用(side-effects)。函数式编程是声明式(declarative)而不是命令式(imperative)的编程。&lt;/p&gt;
-&lt;p&gt;函数式编程是一种编程方法、模式，类同于面向对象编程、过程式编程。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flex</title>
-    <link href="https://stevens1995.github.io/2017/08/16/Flex/"/>
-    <id>https://stevens1995.github.io/2017/08/16/Flex/</id>
-    <published>2017-08-16T11:39:48.000Z</published>
-    <updated>2017-09-04T07:13:27.500Z</updated>
-    
-    <content type="html"><![CDATA[<h4>Flex中关于flex-grow与flex-shrink的计算</h4>
-
-<p>Flex容器中的项目<code>Flex</code>属性简写</p>
-<p><code>flex:1 0 150px;</code><br>这个简写能被拆分成三个属性：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">flex-grow:<span class="number">1</span>;</div><div class="line"></div><div class="line">flex-shrink:<span class="number">0</span>;</div><div class="line"></div><div class="line">felx-basis:<span class="number">150</span>px;</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h5>flex-grow</h5>
-
-<p>定义容器中项目的增长，当容器空间有剩余时，计算方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">增长的长度 = 剩余空间 × (某个项目的flex-grow属性值/所有项目flex-grow属性值的和)</div></pre></td></tr></table></figure>
-<h5>flex-shrink</h5>
-
-<p>定义容器中项目的收缩，当容器空间不够时，计算方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">总和 = 每个项目的flex-shrink的值 × 项目的flex-basis值</div><div class="line"></div><div class="line">项目缩小的长度 = 超过的空间 × (每个项目的flex-shrink的值×项目的flex-basis)</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4&gt;Flex中关于flex-grow与flex-shrink的计算&lt;/h4&gt;
-
-&lt;p&gt;Flex容器中的项目&lt;code&gt;Flex&lt;/code&gt;属性简写&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;flex:1 0 150px;&lt;/code&gt;&lt;br&gt;这个简写能被拆分成三个属性：&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;flex-grow:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;flex-shrink:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;felx-basis:&lt;span class=&quot;number&quot;&gt;150&lt;/span&gt;px;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="css" scheme="https://stevens1995.github.io/categories/css/"/>
-    
-    
-      <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
     
   </entry>
   
