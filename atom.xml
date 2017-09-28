@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-09-27T10:05:03.820Z</updated>
+  <updated>2017-09-28T13:48:31.799Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -16,13 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ES6中的Promise和异步编程</title>
+    <link href="https://stevens1995.github.io/2017/09/28/ES6%E4%B8%AD%E7%9A%84Promise%E5%92%8C%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/"/>
+    <id>https://stevens1995.github.io/2017/09/28/ES6中的Promise和异步编程/</id>
+    <published>2017-09-28T04:19:19.000Z</published>
+    <updated>2017-09-28T13:48:31.799Z</updated>
+    
+    <content type="html"><![CDATA[<h4>ES6中的Promise和异步编程</h4>
+
+<p>Promise是除了事件和回调函数之外，异步编程的另一种选择。</p>
+<p><strong>异步编程背景</strong><br>javascript引擎是基于单线程和事件循环来构建的，一次只能执行一段代码，所以需要来监听需要执行的代码，这些代码保存在<code>job queue</code>中，当一段代码准备要执行时就会添加到<code>job queue</code>中，<code>event loop</code>是一段监听<code>job queue</code>的进程，当主程序中的代码执行完毕时，<code>event loop</code>检查<code>job queue</code>是否还有代码需要执行。</p>
+<p><code>事件模型</code><br>当用户点击鼠标或者按下键盘时，触发一个事件，事件相对应的处理程序便会添加到<code>job queue</code>中，这是javascript中最基础的异步编程方式。在这种模式下，代码必须跟踪处理程序所对应的对象，当情况很复杂的时候，跟踪对象也变得愈发艰难。   </p>
+<p><code>回调函数</code><br>回调函数的一个最主要的问题就是<code>callback hell</code>，比如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">method1(<span class="function"><span class="keyword">function</span>(<span class="params">err, result</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="keyword">throw</span> err;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    method2(<span class="function"><span class="keyword">function</span>(<span class="params">err, result</span>) </span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (err) &#123;</div><div class="line">            <span class="keyword">throw</span> err;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        method3(<span class="function"><span class="keyword">function</span>(<span class="params">err, result</span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (err) &#123;</div><div class="line">                <span class="keyword">throw</span> err;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            method4(<span class="function"><span class="keyword">function</span>(<span class="params">err, result</span>) </span>&#123;</div><div class="line"></div><div class="line">                <span class="keyword">if</span> (err) &#123;</div><div class="line">                    <span class="keyword">throw</span> err;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                method5(result);</div><div class="line">            &#125;);</div><div class="line"></div><div class="line">        &#125;);</div><div class="line"></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><strong>Promise基础</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;ES6中的Promise和异步编程&lt;/h4&gt;
+
+&lt;p&gt;Promise是除了事件和回调函数之外，异步编程的另一种选择。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;异步编程背景&lt;/strong&gt;&lt;br&gt;javascript引擎是基于单线程和事件循环来构建的，一次只能执行一段代码，所以需要
+    
+    </summary>
+    
+    
+      <category term="ES6" scheme="https://stevens1995.github.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>浏览器同源策略及规避方法</title>
     <link href="https://stevens1995.github.io/2017/09/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E5%8F%8A%E8%A7%84%E9%81%BF%E6%96%B9%E6%B3%95/"/>
     <id>https://stevens1995.github.io/2017/09/27/浏览器同源策略及规避方法/</id>
     <published>2017-09-27T06:58:08.000Z</published>
-    <updated>2017-09-27T10:05:03.820Z</updated>
+    <updated>2017-09-28T08:23:48.667Z</updated>
     
-    <content type="html"><![CDATA[<p></p><h4>浏览器同源策略以及规避方法</h4><br>同源策略：最初的含义是A网页设置的cookie，B网页不能打开，除非这两个网页同源，同源值得的三个相同<p></p>
+    <content type="html"><![CDATA[<p></p><h4>浏览器同源策略以及规避方法</h4><br>转载自<code>阮一峰</code><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="external">浏览器同源策略以及规避方法</a><br>同源策略：最初的含义是A网页设置的cookie，B网页不能打开，除非这两个网页同源，同源指的是这三个相同<p></p>
 <p><ul><br>    <li>协议相同</li><br>    <li>域名相同</li><br>    <li>端口相同</li><br></ul><br>非同源间的限制：</p>
 <p><ul><br>    <li>cookie、session、IndexDB无法访问</li><br>    <li>DOM无法获得</li><br>    <li>AJAX请求不能发送</li><br></ul><br><a id="more"></a></p>
 <p></p><h4>规避方法:</h4><br><strong>cookie</strong><br><strong>iframe</strong><br><strong>AJAX</strong><br>同源策略中，AJAX只能发送给同源的网址，否则就会报错。<br>解决的方法有四种：  <p></p>
@@ -53,7 +83,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;/p&gt;&lt;h4&gt;浏览器同源策略以及规避方法&lt;/h4&gt;&lt;br&gt;同源策略：最初的含义是A网页设置的cookie，B网页不能打开，除非这两个网页同源，同源值得的三个相同&lt;p&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;/p&gt;&lt;h4&gt;浏览器同源策略以及规避方法&lt;/h4&gt;&lt;br&gt;转载自&lt;code&gt;阮一峰&lt;/code&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2016/04/cors.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;浏览器同源策略以及规避方法&lt;/a&gt;&lt;br&gt;同源策略：最初的含义是A网页设置的cookie，B网页不能打开，除非这两个网页同源，同源指的是这三个相同&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;ul&gt;&lt;br&gt;    &lt;li&gt;协议相同&lt;/li&gt;&lt;br&gt;    &lt;li&gt;域名相同&lt;/li&gt;&lt;br&gt;    &lt;li&gt;端口相同&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;非同源间的限制：&lt;/p&gt;
 &lt;p&gt;&lt;ul&gt;&lt;br&gt;    &lt;li&gt;cookie、session、IndexDB无法访问&lt;/li&gt;&lt;br&gt;    &lt;li&gt;DOM无法获得&lt;/li&gt;&lt;br&gt;    &lt;li&gt;AJAX请求不能发送&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;
     
@@ -103,9 +133,21 @@
     <link href="https://stevens1995.github.io/2017/09/27/ES6%E4%B8%AD%E5%85%B3%E4%BA%8EObject%E7%9A%84%E6%89%A9%E5%B1%95/"/>
     <id>https://stevens1995.github.io/2017/09/27/ES6中关于Object的扩展/</id>
     <published>2017-09-27T02:11:00.000Z</published>
-    <updated>2017-09-27T02:13:26.721Z</updated>
+    <updated>2017-09-28T04:36:40.279Z</updated>
+    
+    <content type="html"><![CDATA[<h4>ES6中的Promise和异步编程</h4><br><code>Promise</code>是除了事件和回调函数之后的另一种异步编程的选择。<br><br><h4>异步编程的背景</h4>
+
+<p><strong>事件模型</strong></p>
+<p>__</p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h4&gt;ES6中的Promise和异步编程&lt;/h4&gt;&lt;br&gt;&lt;code&gt;Promise&lt;/code&gt;是除了事件和回调函数之后的另一种异步编程的选择。&lt;br&gt;&lt;br&gt;&lt;h4&gt;异步编程的背景&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;事件模型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;__&lt;/p&gt;
+
     
     </summary>
     
@@ -226,12 +268,25 @@
     <link href="https://stevens1995.github.io/2017/09/26/CSS3%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
     <id>https://stevens1995.github.io/2017/09/26/CSS3新特性总结/</id>
     <published>2017-09-26T03:04:00.000Z</published>
-    <updated>2017-09-26T03:04:00.636Z</updated>
+    <updated>2017-09-28T04:14:58.200Z</updated>
+    
+    <content type="html"><![CDATA[<p>CSS被划分为模块:  </p>
+<ul><br>    <li>选择器</li><br>    <li>框模型</li><br>    <li>背景和边框</li><br>    <li>文本效果</li><br>    <li>2D/3D转换</li><br>    <li>动画</li><br>    <li>多列布局</li><br>    <li>用户界面</li><br></ul>
+
+<p><strong>选择器</strong></p>
+<p><strong>框模型</strong></p>
+<p><strong>背景和边框</strong><br>边框：<code>border-radius</code>、<code>border-image</code>、<code>box-shadow</code><br>背景：<code>background-clip</code>、<code>background-origin</code> 、<code>background-size</code><br><strong>文本效果</strong><br><code>text-shadow</code>、<code>word-wrap</code><br><strong>背景和边框</strong><br><strong>文本效果</strong><br><strong>2D/3D效果</strong><br><code>transform</code>、<code>transform-origin</code><br>2D转换方法:<code>translate()</code>、<code>scale()</code>、<code>skew()</code>、<code>rotate()</code>、<code>matrix</code><br>3D转换属性:<code>transform-style</code>、<code>perspective</code>、<code>perspective-origin</code>、<code>backface-visibility</code><br><strong>动画</strong><br>过渡：<code>transition</code>（简写）、<code>transition-property</code>、<code>transition-duration</code>、<code>transition-timing-function</code>、<code>transition-delay</code><br>动画: <code>@keyframes</code>、<code>animation</code>、<code>animation-name</code>、<code>animation-duration</code>、<code>animation-timing-function</code>、<code>animation-delay</code>、<code>animation-iteration-count</code>、<code>animation-direction</code>、<code>animation-play-state</code>、<code>animation-fill-mode</code><br><strong>多列布局</strong><br><code>column-count</code>、<code>column-fill</code>、<code>column-gap</code>、<code>column-rule</code>、<code>column-span</code>、<code>column-width</code>、<code>columns</code><br><strong>用户界面</strong></p>
+]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;CSS被划分为模块:  &lt;/p&gt;
+&lt;ul&gt;&lt;br&gt;    &lt;li&gt;选择器&lt;/li&gt;&lt;br&gt;    &lt;li&gt;框模型&lt;/li&gt;&lt;br&gt;    &lt;li&gt;背景和边框&lt;/li&gt;&lt;br&gt;    &lt;li&gt;文本效果&lt;/li&gt;&lt;br&gt;    &lt;li&gt;2D/3D转换&lt;/li&gt;&lt;br&gt;    &lt;
+    
     </summary>
     
+    
+      <category term="CSS" scheme="https://stevens1995.github.io/tags/CSS/"/>
     
   </entry>
   
@@ -332,7 +387,7 @@
     <link href="https://stevens1995.github.io/2017/09/08/ES6%E4%B8%AD%E7%9A%84Symbol%E7%B1%BB%E5%9E%8B/"/>
     <id>https://stevens1995.github.io/2017/09/08/ES6中的Symbol类型/</id>
     <published>2017-09-08T01:14:00.000Z</published>
-    <updated>2017-09-19T02:12:36.938Z</updated>
+    <updated>2017-09-28T14:24:59.822Z</updated>
     
     <content type="html"><![CDATA[<h4>Symbols and Symbol properties</h4>
 
@@ -722,40 +777,6 @@
     
     
       <category term="CSS" scheme="https://stevens1995.github.io/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>slice &amp; splice</title>
-    <link href="https://stevens1995.github.io/2017/08/22/sliceandsplice/"/>
-    <id>https://stevens1995.github.io/2017/08/22/sliceandsplice/</id>
-    <published>2017-08-22T11:30:36.000Z</published>
-    <updated>2017-08-28T14:16:26.989Z</updated>
-    
-    <content type="html"><![CDATA[<h4>Array.prototype.slice &amp; Array.prototype.splice</h4>
-
-<p>Array.prototype.slice 返回从开始索引到结束索引的数组(不包括结束)，不改变原数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.slice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">//[1,2]</span></div></pre></td></tr></table></figure>
-<p>Array.prototype.splce 从开始索引删除指定个数的元素(包括开始)，改变原数组，返回删除的元素组成的数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.splice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">// [1,2]</span></div><div class="line">a <span class="comment">//[3,4,5]</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4&gt;Array.prototype.slice &amp;amp; Array.prototype.splice&lt;/h4&gt;
-
-&lt;p&gt;Array.prototype.slice 返回从开始索引到结束索引的数组(不包括结束)，不改变原数组&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;a.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;span class=&quot;comment&quot;&gt;//[1,2]&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;Array.prototype.splce 从开始索引删除指定个数的元素(包括开始)，改变原数组，返回删除的元素组成的数组&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;a.splice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;span class=&quot;comment&quot;&gt;// [1,2]&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;a &lt;span class=&quot;comment&quot;&gt;//[3,4,5]&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
     
   </entry>
   
