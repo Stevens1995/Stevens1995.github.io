@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://stevens1995.github.io/2017/09/08/ES6%E4%B8%AD%E7%9A%84Symbol%E7%B1%BB%E5%9E%8B/</loc>
+    <loc>https://stevens1995.github.io/2017/09/28/ES6%E4%B8%AD%E7%9A%84Promise%E5%92%8C%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</loc>
     
-    <lastmod>2017-09-28T14:24:59.822Z</lastmod>
+    <lastmod>2017-09-29T16:27:56.064Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://stevens1995.github.io/2017/09/28/ES6%E4%B8%AD%E7%9A%84Promise%E5%92%8C%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://stevens1995.github.io/2017/09/29/web%E7%BC%93%E5%AD%98/</loc>
     
-    <lastmod>2017-09-28T13:48:31.799Z</lastmod>
+    <lastmod>2017-09-29T15:06:13.849Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stevens1995.github.io/2017/09/25/ES6%E4%B8%AD%E7%9A%84class/</loc>
+    
+    <lastmod>2017-09-29T03:58:13.408Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stevens1995.github.io/2017/09/08/ES6%E4%B8%AD%E7%9A%84Symbol%E7%B1%BB%E5%9E%8B/</loc>
+    
+    <lastmod>2017-09-28T14:25:50.154Z</lastmod>
     
   </url>
   
@@ -68,13 +82,6 @@
     <loc>https://stevens1995.github.io/2017/09/26/HTML5%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</loc>
     
     <lastmod>2017-09-26T03:04:40.477Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://stevens1995.github.io/2017/09/25/ES6%E4%B8%AD%E7%9A%84class/</loc>
-    
-    <lastmod>2017-09-25T14:44:31.935Z</lastmod>
     
   </url>
   
