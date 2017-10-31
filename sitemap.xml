@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://stevens1995.github.io/2017/09/28/ES6%E4%B8%AD%E7%9A%84Promise%E5%92%8C%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://stevens1995.github.io/2017/09/29/web%E7%BC%93%E5%AD%98/</loc>
     
-    <lastmod>2017-09-30T15:47:54.923Z</lastmod>
+    <lastmod>2017-10-31T04:52:35.845Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://stevens1995.github.io/2017/09/29/web%E7%BC%93%E5%AD%98/</loc>
+    <loc>https://stevens1995.github.io/2017/05/16/javascript%E4%B8%AD%E7%9A%84this/</loc>
     
-    <lastmod>2017-09-29T15:06:13.849Z</lastmod>
+    <lastmod>2017-10-01T02:58:47.269Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stevens1995.github.io/2017/09/28/ES6%E4%B8%AD%E7%9A%84Promise%E5%92%8C%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</loc>
+    
+    <lastmod>2017-09-30T15:53:49.873Z</lastmod>
     
   </url>
   
@@ -201,13 +208,6 @@
     <loc>https://stevens1995.github.io/2017/05/07/javaScript%20getter%20and%20setter/</loc>
     
     <lastmod>2017-08-28T14:16:10.599Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://stevens1995.github.io/2017/05/16/javascript%E4%B8%AD%E7%9A%84this/</loc>
-    
-    <lastmod>2017-08-28T14:16:01.401Z</lastmod>
     
   </url>
   
