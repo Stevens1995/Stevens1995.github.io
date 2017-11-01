@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://stevens1995.github.io/"/>
-  <updated>2017-10-31T04:52:35.845Z</updated>
+  <updated>2017-11-01T08:38:49.845Z</updated>
   <id>https://stevens1995.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://stevens1995.github.io/2017/09/29/web%E7%BC%93%E5%AD%98/"/>
     <id>https://stevens1995.github.io/2017/09/29/web缓存/</id>
     <published>2017-09-29T07:14:06.000Z</published>
-    <updated>2017-10-31T04:52:35.845Z</updated>
+    <updated>2017-11-01T08:38:49.845Z</updated>
     
     <content type="html"><![CDATA[<p></p><h4>web缓存机制</h4><br>web缓存类型：<p></p>
 <ul><br>    <li>数据库缓存</li><br>    <li>服务器缓存</li><br>        代理服务器缓存、CDN缓存<br>    <li>浏览器缓存</li><br></ul>
@@ -186,34 +186,6 @@
   </entry>
   
   <entry>
-    <title>ES6中关于Object的扩展</title>
-    <link href="https://stevens1995.github.io/2017/09/27/ES6%E4%B8%AD%E5%85%B3%E4%BA%8EObject%E7%9A%84%E6%89%A9%E5%B1%95/"/>
-    <id>https://stevens1995.github.io/2017/09/27/ES6中关于Object的扩展/</id>
-    <published>2017-09-27T02:11:00.000Z</published>
-    <updated>2017-09-28T04:36:40.279Z</updated>
-    
-    <content type="html"><![CDATA[<h4>ES6中的Promise和异步编程</h4><br><code>Promise</code>是除了事件和回调函数之后的另一种异步编程的选择。<br><br><h4>异步编程的背景</h4>
-
-<p><strong>事件模型</strong></p>
-<p>__</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4&gt;ES6中的Promise和异步编程&lt;/h4&gt;&lt;br&gt;&lt;code&gt;Promise&lt;/code&gt;是除了事件和回调函数之后的另一种异步编程的选择。&lt;br&gt;&lt;br&gt;&lt;h4&gt;异步编程的背景&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;事件模型&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;__&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="ES6" scheme="https://stevens1995.github.io/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>ES6中的Function扩展</title>
     <link href="https://stevens1995.github.io/2017/09/26/ES6%E4%B8%AD%E7%9A%84Function%E6%89%A9%E5%B1%95/"/>
     <id>https://stevens1995.github.io/2017/09/26/ES6中的Function扩展/</id>
@@ -289,34 +261,6 @@
     
     
       <category term="ES6" scheme="https://stevens1995.github.io/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ES6中的Set和Map</title>
-    <link href="https://stevens1995.github.io/2017/09/26/ES6%E4%B8%AD%E7%9A%84Set%E5%92%8CMap/"/>
-    <id>https://stevens1995.github.io/2017/09/26/ES6中的Set和Map/</id>
-    <published>2017-09-26T06:27:37.000Z</published>
-    <updated>2017-09-26T06:27:37.522Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML5新特性总结</title>
-    <link href="https://stevens1995.github.io/2017/09/26/HTML5%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
-    <id>https://stevens1995.github.io/2017/09/26/HTML5新特性总结/</id>
-    <published>2017-09-26T03:04:40.000Z</published>
-    <updated>2017-09-26T03:04:40.477Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
@@ -412,30 +356,6 @@
     
     
       <category term="ES6" scheme="https://stevens1995.github.io/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS揭秘</title>
-    <link href="https://stevens1995.github.io/2017/09/14/CSS%E6%8F%AD%E7%A7%98/"/>
-    <id>https://stevens1995.github.io/2017/09/14/CSS揭秘/</id>
-    <published>2017-09-14T10:23:22.000Z</published>
-    <updated>2017-09-15T01:03:22.588Z</updated>
-    
-    <content type="html"><![CDATA[<h4>1.半透明边框</h4>
-
-<p>关键点：为元素设置背景颜色后，颜色会延伸至border的下面，所以当border为透明时看到的就是背景颜色<br>解决方法：border-clip:padding-box;</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4&gt;1.半透明边框&lt;/h4&gt;
-
-&lt;p&gt;关键点：为元素设置背景颜色后，颜色会延伸至border的下面，所以当border为透明时看到的就是背景颜色&lt;br&gt;解决方法：border-clip:padding-box;&lt;/p&gt;
-
-    
-    </summary>
-    
     
   </entry>
   
@@ -770,6 +690,190 @@
 &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;
     
     </summary>
+    
+    
+      <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flex详解</title>
+    <link href="https://stevens1995.github.io/2017/08/30/Flex%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://stevens1995.github.io/2017/08/30/Flex详解/</id>
+    <published>2017-08-30T06:26:22.000Z</published>
+    <updated>2017-09-19T02:05:22.226Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Flex详解</h4>
+
+<h4>总览:</h4>
+
+<p><img src="https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170830/flexbox.png" alt="flex总览"></p>
+<a id="more"></a>
+<h4>Flex container属性:</h4>
+
+<p><code>display:flex:</code>定义一个Flex容器</p>
+<p><code>flex-direction:</code> 建立主轴，定义项目在主轴上的排列方向 </p>
+<p>row | row-reverse | column | column-reverse<br>row(默认):主轴水平方向，项目从左到右排列<br>row-reverse:主轴水平，项目从右到左<br>column:主轴垂直，项目从上到下<br>column-reverse:主轴垂直，项目从下到上</p>
+<p><code>flex-wrap:</code>默认的所有项目在主轴上排列，不换行，可通过flex-wrap来改变  </p>
+<p><code>nowrap | wrap | wrap-reverse</code></p>
+<p>nowrap(默认):所有项目排列在主轴上不换行<br>wrap:换行，项目从顶部到底部<br>wrap-reverse:不换行，项目从底部到顶部</p>
+<p><code>flex-flow:</code> flex-direction 和 flex-wrap的简写</p>
+<p>flex-flow: &lt;’flex-direction’&gt; || &lt;’felx-wrap’&gt;</p>
+<p><code>justify-content:</code>定义项目在主轴上的排列</p>
+<p><code>flex-start | flex-end | center | space-between | space-around | space-evenly</code></p>
+<p>flex-start(默认):项目从主轴开始的地方开始排列<br>flex-end:从主轴结束的地方开始排列<br>center:项目排列在主轴中间<br>space-between:项目均匀分布在主轴上，第一个在开始线，最后一个在结束线，中间的项目均匀分布<br>space-around:每个项目左边和右边的空隙一样(注意，中间的间隔是左右间隔的两倍)<br>space-evenly:项目间的间隔一样(所有间隔都一样)</p>
+<p><code>align-items:</code>项目在交叉轴上的布局</p>
+<p><code>flex-start | flex-end | center | stretch | baseline</code></p>
+<p>flex-start:项目在交叉轴的边缘从交叉轴的开始处开始<br>flex-end:项目在交叉轴的边缘从交叉轴的结束处开始<br>center:f项目处在交叉轴中间<br>baseline:项目根据基线对齐<br>stretch:伸展填充container  </p>
+<p><code>align-content:</code>排列 主轴上的行 在交叉轴上的空间 (当主轴只有一行时这个属性不起作用)</p>
+<p><code>flex-start | flex-end | center | space-between | space-around | stretch</code></p>
+<p>flex-start:行从交叉轴开始的地方排列<br>flex-end:行从交叉轴结束的地方开始排列<br>center:行在交叉轴的中间<br>space-between:行之间的间隔相等，第一行在交叉轴开始线处，最后一行在交叉轴结束线处<br>space-around:每行左右间距相同<br>stretch:行伸展以填充container</p>
+<h4>Flex items属性:</h4>
+
+<p><code>order:</code>定义项目排列的顺序</p>
+<p>order:<integer></integer></p>
+<p><code>flex-grow:</code>:定义项目扩大的能力，接收一个没有单位的值代表比例，决定占据多少主轴上剩余的可用空间  </p>
+<p><code>flex-shrink:</code>定义项目缩小的能力(负值无效)  </p>
+<p><code>flex-basis:</code>定义在分配剩余空间之前项目的默认大小</p>
+<p><code>flex:</code>前面三个属性的简写</p>
+<p>flex: flex-grow || flex-shrink || flex-basis</p>
+<p><code>align-self:</code>定义个别项目在交叉轴上排列方式，这可以覆盖在container上定义的align-item属性</p>
+<p><code>flex-start | flex-end</code></p>
+<p>flex-start:从交叉轴的开始线处开始排列<br>flex-end:从交叉轴的结束线处开始排列</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Flex详解&lt;/h4&gt;
+
+&lt;h4&gt;总览:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Stevens1995/blogImages/master/20170830/flexbox.png&quot; alt=&quot;flex总览&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://stevens1995.github.io/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>slice &amp; splice</title>
+    <link href="https://stevens1995.github.io/2017/08/22/sliceandsplice/"/>
+    <id>https://stevens1995.github.io/2017/08/22/sliceandsplice/</id>
+    <published>2017-08-22T11:30:36.000Z</published>
+    <updated>2017-08-28T14:16:26.989Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Array.prototype.slice &amp; Array.prototype.splice</h4>
+
+<p>Array.prototype.slice 返回从开始索引到结束索引的数组(不包括结束)，不改变原数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.slice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">//[1,2]</span></div></pre></td></tr></table></figure>
+<p>Array.prototype.splce 从开始索引删除指定个数的元素(包括开始)，改变原数组，返回删除的元素组成的数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line">a.splice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">// [1,2]</span></div><div class="line">a <span class="comment">//[3,4,5]</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Array.prototype.slice &amp;amp; Array.prototype.splice&lt;/h4&gt;
+
+&lt;p&gt;Array.prototype.slice 返回从开始索引到结束索引的数组(不包括结束)，不改变原数组&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;a.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;span class=&quot;comment&quot;&gt;//[1,2]&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Array.prototype.splce 从开始索引删除指定个数的元素(包括开始)，改变原数组，返回删除的元素组成的数组&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;a.splice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;span class=&quot;comment&quot;&gt;// [1,2]&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;a &lt;span class=&quot;comment&quot;&gt;//[3,4,5]&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FunctionalPrograming</title>
+    <link href="https://stevens1995.github.io/2017/08/19/FunctionalPrograming/"/>
+    <id>https://stevens1995.github.io/2017/08/19/FunctionalPrograming/</id>
+    <published>2017-08-19T09:08:07.000Z</published>
+    <updated>2017-09-04T07:13:25.925Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Functional Programing(函数式编程)</h4>
+
+
+<p>函数式编程(Functional Programing、FP)通过构建纯函数来编程，避免了状态共享(shared state)、可变的数据(mutable data)、副作用(side-effects)。函数式编程是声明式(declarative)而不是命令式(imperative)的编程。</p>
+<p>函数式编程是一种编程方法、模式，类同于面向对象编程、过程式编程。</p>
+<a id="more"></a>
+<h5>掌握函数式编程需要理解的几个概念：</h5>
+
+<p>纯函数(pure function)、函数组合(function composition)、避免共享状态(avoid shared state)、避免突变状态(avoid mutation state)、避免副作用(avoid side-effects)</p>
+<h6>纯函数是拥有以下特性的函数：</h6>  
+
+<p>1.相同的输入对应相同的输出<br>2.没有副作用</p>
+<p>并且，纯函数有许多对函数式编程来说很重要的特性，比如引用透明性(referential transparency，指可以用函数的返回值替代函数而不对代码的含义产生影响)</p>
+<h6>函数组合：</h6><br>将多个函数组合起来以产生一个新的函数或者执行某些计算，e.g.f(g(x))<br><br><h6>共享状态(shared state)：</h6><br>共享状态可以包含以下情形：共享作用域中的变量、对象或者内存空间，在多个作用域中传递的对象的属性<br><br>共享状态的弊端：<br>1.改变函数的执行顺序和时间会产生一些不同的结果<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> x = &#123;</div><div class="line">	val:<span class="number">2</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> x1 = <span class="function"><span class="params">()</span>=&gt;</span>x.val+=<span class="number">1</span>;</div><div class="line"><span class="keyword">const</span> x2 = <span class="function"><span class="params">()</span>=&gt;</span>x.val*=<span class="number">2</span>;</div><div class="line"></div><div class="line">x1();</div><div class="line">x2(); </div><div class="line"><span class="built_in">console</span>.log(x.val); <span class="comment">//6</span></div><div class="line"></div><div class="line"><span class="comment">//another order</span></div><div class="line">x2();</div><div class="line">x1();</div><div class="line"><span class="built_in">console</span>.log(x.val)<span class="comment">//5</span></div></pre></td></tr></table></figure><br><br>避免了共享状态后，函数的顺序不会影响执行结果：<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> y = &#123;</div><div class="line">	val:<span class="number">2</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> y1 = <span class="function"><span class="params">y</span>=&gt;</span><span class="built_in">Object</span>.assign(&#123;&#125;,y,&#123; <span class="attr">val</span>:x.val+<span class="number">1</span>&#125;);</div><div class="line"><span class="keyword">const</span> y2 = <span class="function"><span class="params">y</span>=&gt;</span><span class="built_in">Object</span>.assign(&#123;&#125;,y,&#123; <span class="attr">val</span>:x.val*<span class="number">2</span>&#125;);</div><div class="line"></div><div class="line"><span class="comment">//在此你可以执行任意的代码，而不会影响到后面的输出，因为函数不依赖于后面执行函数的依赖的状态</span></div><div class="line">y1();</div><div class="line">y2();</div><div class="line"></div><div class="line"><span class="comment">//或者</span></div><div class="line">y2();</div><div class="line">y1();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(y1(y2(y).val));</div></pre></td></tr></table></figure><br><br><h6>永恒性(immutability):</h6>
+
+<p>不能通过const来定义不可变的对象，const只是指定变量的引用的对象不能改变，可以改变对象的属性。</p>
+<p>Object.freeze()方法也不能完全是对象不可变，比如对象中又有对象，除非使用Object.freeze()方法来封住每一层的对象。</p>
+<h6>副作用：</h6>
+
+<p>在函数式编程中，副作用指的是任何在调用的函数之外可以检测到的应用程序状态的改变。</p>
+<h5>通过高阶函数的可重用性(reusability though high order function)：</h5>
+
+<h5></h5>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Functional Programing(函数式编程)&lt;/h4&gt;
+
+
+&lt;p&gt;函数式编程(Functional Programing、FP)通过构建纯函数来编程，避免了状态共享(shared state)、可变的数据(mutable data)、副作用(side-effects)。函数式编程是声明式(declarative)而不是命令式(imperative)的编程。&lt;/p&gt;
+&lt;p&gt;函数式编程是一种编程方法、模式，类同于面向对象编程、过程式编程。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="https://stevens1995.github.io/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="https://stevens1995.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flex</title>
+    <link href="https://stevens1995.github.io/2017/08/16/Flex/"/>
+    <id>https://stevens1995.github.io/2017/08/16/Flex/</id>
+    <published>2017-08-16T11:39:48.000Z</published>
+    <updated>2017-09-04T07:13:27.500Z</updated>
+    
+    <content type="html"><![CDATA[<h4>Flex中关于flex-grow与flex-shrink的计算</h4>
+
+<p>Flex容器中的项目<code>Flex</code>属性简写</p>
+<p><code>flex:1 0 150px;</code><br>这个简写能被拆分成三个属性：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">flex-grow:<span class="number">1</span>;</div><div class="line"></div><div class="line">flex-shrink:<span class="number">0</span>;</div><div class="line"></div><div class="line">felx-basis:<span class="number">150</span>px;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h5>flex-grow</h5>
+
+<p>定义容器中项目的增长，当容器空间有剩余时，计算方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">增长的长度 = 剩余空间 × (某个项目的flex-grow属性值/所有项目flex-grow属性值的和)</div></pre></td></tr></table></figure>
+<h5>flex-shrink</h5>
+
+<p>定义容器中项目的收缩，当容器空间不够时，计算方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">总和 = 每个项目的flex-shrink的值 × 项目的flex-basis值</div><div class="line"></div><div class="line">项目缩小的长度 = 超过的空间 × (每个项目的flex-shrink的值×项目的flex-basis)</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4&gt;Flex中关于flex-grow与flex-shrink的计算&lt;/h4&gt;
+
+&lt;p&gt;Flex容器中的项目&lt;code&gt;Flex&lt;/code&gt;属性简写&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;flex:1 0 150px;&lt;/code&gt;&lt;br&gt;这个简写能被拆分成三个属性：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;flex-grow:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;flex-shrink:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;felx-basis:&lt;span class=&quot;number&quot;&gt;150&lt;/span&gt;px;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="css" scheme="https://stevens1995.github.io/categories/css/"/>
     
     
       <category term="css" scheme="https://stevens1995.github.io/tags/css/"/>
