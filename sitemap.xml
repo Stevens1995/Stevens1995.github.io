@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://stevens1995.github.io//404.html</loc>
+    
+    <lastmod>2019-05-30T15:27:38.859Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://stevens1995.github.io/Truly-reactive-programming-with-Svelte3-0/</loc>
     
     <lastmod>2019-05-30T14:54:33.631Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://stevens1995.github.io/about/index.html</loc>
     
     <lastmod>2019-05-27T14:40:07.861Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://stevens1995.github.io//404.html</loc>
-    
-    <lastmod>2019-05-27T14:40:07.852Z</lastmod>
     
   </url>
   
